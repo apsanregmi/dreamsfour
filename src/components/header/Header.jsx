@@ -130,14 +130,14 @@ function Header() {
 
             <div className="menu2ndpart items-end text-right justify-end ">
             <ul className="menu-list">
-              <li>
+              {/* <li>
                 <Link
                   href="/cateringAndEvents"
                   className={currentRoute === "/cateringAndEvents" ? "active" : ""}
                 >
                   Catering And Events
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="menu-item-has-children">
                 <Link
                   href="/menu1"
@@ -200,10 +200,10 @@ function Header() {
               </li> */}
               <li>
                 <Link
-                  href="/reservation"
-                  className={currentRoute === "/reservation" ? "active" : "disable"}
+                  href="/catering-and-events"
+                  className={currentRoute === "/cateringAndEvents" ? "active" : "disable"}
                 >
-                  Reservation
+                  Catering And Events
                 </Link>
               </li>
               <li>
@@ -212,6 +212,14 @@ function Header() {
                   className={currentRoute === "/contact" ? "active" : "disable"}
                 >
                   
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/reservation"
+                  className={currentRoute === "/reservation" ? "active" : "disable"}
+                >
+                  Reservation
                 </Link>
               </li>
               <li>
@@ -225,7 +233,7 @@ function Header() {
             </ul>
             </div>
             
-            <div className="hotline d-lg-none d-flex mb-30">
+            {/* <div className="hotline d-lg-none d-flex mb-30">
               <div className="hotline-icon">
                 <svg
                   width={26}
@@ -244,15 +252,16 @@ function Header() {
                   <a href="tel:+998-8776345">+998-8776345</a>
                 </h6>
               </div>
-            </div>
+            </div> */}
+            
             <div className="reservation-btn d-lg-none d-flex">
-              <Link href="/reservation" className="primary-btn4 btn-md">
-                Find Reservation
+              <Link href="/menu1" className="primary-btn4 btn-md">
+                Menu
               </Link>
             </div>
           </div>
           <div className="nav-right d-flex jsutify-content-end align-items-center">
-            <Link href="/menu" className="primary-btn4 btn-md">
+            <Link href="/menu1" className="primary-btn4 btn-md">
               Menu
             </Link>
             <div
