@@ -132,13 +132,13 @@ function Header() {
             <ul className="menu-list">
               <li>
                 <Link
-                  href="/about"
-                  className={currentRoute === "/about" ? "active" : ""}
+                  href="/cateringAndEvents"
+                  className={currentRoute === "/cateringAndEvents" ? "active" : ""}
                 >
-                  About
+                  Catering And Events
                 </Link>
               </li>
-              <li className="menu-item-has-children">
+              {/* <li className="menu-item-has-children">
                 <Link
                   href="/menu1"
                   className={
@@ -197,13 +197,13 @@ function Header() {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  href="/contact"
-                  className={currentRoute === "/contact" ? "active" : "disable"}
+                  href="/reservation"
+                  className={currentRoute === "/reservation" ? "active" : "disable"}
                 >
-                  Order Online
+                  Reservation
                 </Link>
               </li>
               <li>
@@ -211,7 +211,7 @@ function Header() {
                   href="/contact"
                   className={currentRoute === "/contact" ? "active" : "disable"}
                 >
-                  Events and Catering
+                  
                 </Link>
               </li>
               <li>
@@ -252,8 +252,8 @@ function Header() {
             </div>
           </div>
           <div className="nav-right d-flex jsutify-content-end align-items-center">
-            <Link href="/reservation" className="primary-btn4 btn-md">
-              Find Reservation
+            <Link href="/menu" className="primary-btn4 btn-md">
+              Menu
             </Link>
             <div
               className="sidebar-button mobile-menu-btn "
