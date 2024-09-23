@@ -17,6 +17,7 @@ function IndexPage() {
         <title>4Dreams Nepali and Indian Cusine</title>
         <meta name="description" content="Discover your perfect blend of authentic & flavorful foods!" />
         <link rel="icon" href="assets/images/icon/logo-icon.svg" />
+        {/* <link rel="icon" href="assets/images/icon/logo-icon.svg" /> */}
       </Head>
       <Header />
       <Banner />
