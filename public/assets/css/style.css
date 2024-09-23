@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*
 Template Name: Restho - Resturent HTML Template
 */

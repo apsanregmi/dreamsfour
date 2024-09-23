@@ -57,6 +57,7 @@ function Banner() {
                     src="assets/images/icon/sub-title-vec.svg"
                     alt="sub-title-vec"
                   />
+                  <h1 className="text-red-400"> welcome to Nepal</h1>
                   Welcome to 4Dreams Nepali & Indian Cuisine
                   <img
                     className="right-vec"
