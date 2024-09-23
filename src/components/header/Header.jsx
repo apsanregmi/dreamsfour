@@ -127,6 +127,8 @@ function Header() {
                 <i className="bi bi-x-lg text-white" />
               </div>
             </div>
+
+            <div className="menu2ndpart items-end text-right justify-end ">
             <ul className="menu-list">
               <li>
                 <Link
@@ -221,6 +223,8 @@ function Header() {
                 </Link>
               </li>
             </ul>
+            </div>
+            
             <div className="hotline d-lg-none d-flex mb-30">
               <div className="hotline-icon">
                 <svg

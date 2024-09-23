@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import SmoothPageScroll from "../components/common/SmoothPageScroll";
 import "../styles/main.css";
+import '../styles/tailwind.css';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
