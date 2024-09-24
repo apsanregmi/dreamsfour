@@ -9,7 +9,7 @@ const MenuItem = ({ item, index }) => {
       </div>
       
       {/* Menu Content */}
-      <div className="menu-content flex-1">
+      <div className="menu-content flex-1 ">
         <div className="menu-title flex justify-between items-center">
           <h4 className="text-lg font-semibold">{item.slideCategoryTitle}</h4>
           <span className="text-lg font-bold text-gray-700">${item.price}</span>

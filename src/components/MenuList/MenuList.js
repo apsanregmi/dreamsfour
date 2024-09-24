@@ -13,30 +13,56 @@ const groupByCategory = (items) => {
 };
 
 const MenuList = ({ items, addToCart }) => {
-  const groupedItems = groupByCategory(items);  // Group items by foodCategory
+  const groupedItems = groupByCategory(items); // Group items by foodCategory
 
   return (
-    <div className="menu-list p-4">
+    <div className="menu-list p-6 max-w-4xl mx-auto">
       {/* Dynamically rendering each category */}
       {Object.keys(groupedItems).map((category) => (
-        <div key={category} className="mb-8">
-          <h2 className="text-center text-2xl font-semibold my-6">{category}</h2> {/* Dynamic Category Title */}
+        <div key={category} className="mb-12">
+          <h2 className="text-center text-3xl font-semibold text-yellow-600 mb-6">
+            {category}
+          </h2> {/* Dynamic Category Title */}
           <ul className="divide-y divide-gray-200">
             {groupedItems[category].map((item, index) => (
-              <li key={item.id} className="flex justify-between items-center py-4">
-                <MenuItem item={item} index={index} />
-                <button
-                  onClick={() => addToCart(item)}
-                  className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-200 transition duration-300 shadow-md"
-                >
-                  +
-                </button>
+              <li
+                key={item.id}
+                className="flex justify-between items-center py-6"
+              >
+                <div className="flex items-center">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-16 h-16 object-cover rounded-full mr-4 shadow-lg"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {item.slideTitle}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <span className="text-xl font-semibold text-gray-800 mr-6">
+                    ${item.price}
+                  </span>
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center hover:bg-yellow-600 transition duration-300 shadow-md"
+                  >
+                    +
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
         </div>
       ))}
-      <div className="notice-location mt-8 text-center text-gray-500">
+
+      <div className="notice-location mt-12 text-center text-gray-500">
         <h4 className="font-semibold mb-2">
           <span className="text-red-600">N.B:</span> All food is available in the restaurant. Please don’t waste your food.
         </h4>

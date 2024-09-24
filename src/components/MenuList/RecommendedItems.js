@@ -18,7 +18,7 @@ const RecommendedItem = ({ item }) => {
         <span className="text-2xl font-bold text-gray-900">{item.price}</span>
         <button className="bg-yellow-500 text-white px-3 py-2 rounded-full">+</button>
       </div>
-      <div className="bg-yellow-500 text-white rounded-full px-3 py-1 absolute top-2 right-2">
+      <div className="bg-yellow-500 text-white rounded-full px-3 mb-4 py-1 absolute top-2 right-2">
         Recommended
       </div>
     </div>
