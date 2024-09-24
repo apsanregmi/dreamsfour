@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import menuData from "../../data/menu.json"
+import menuData from "../../data/menu.json";
 import RecommendedItem from './RecommendedItems';
 import FilterControls from './FilterControls';
 import MenuList from './MenuList';
 
-const FilterAndRecommend = () => {
+const FilterAndRecommend = ({ addToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [vegMode, setVegMode] = useState(false);
 
@@ -18,7 +18,7 @@ const FilterAndRecommend = () => {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md">
       <FilterControls
-        categories={['ALL', 'Recommended', 'Breakfast', 'Lunch', 'Dinner', 'Beverages']}
+        categories={['ALL', 'Breakfast', 'Lunch', 'Dinner']}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
         vegMode={vegMode}
@@ -26,10 +26,10 @@ const FilterAndRecommend = () => {
       />
 
       {/* Static Recommended Item */}
-      <RecommendedItem item={menuData.menu[0]} />
+      <RecommendedItem item={menuData.menu[0]} addToCart={addToCart} />
 
       {/* Dynamic Menu List */}
-      <MenuList items={filteredMenu} />
+      <MenuList items={filteredMenu} addToCart={addToCart} />
     </div>
   );
 };

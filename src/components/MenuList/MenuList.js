@@ -1,11 +1,19 @@
 import React from 'react';
 import MenuItem from './MenuItem';
 
-const MenuList = ({ items }) => {
+const MenuList = ({ items, addToCart }) => {
   return (
-    <div className="mt-6">
+    <div>
       {items.map((item) => (
-        <MenuItem key={item.id} item={item} />
+        <div key={item.id}>
+          <MenuItem item={item} />
+          <button
+            onClick={() => addToCart(item)}
+            className="bg-blue-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+          >
+            Add to Cart
+          </button>
+        </div>
       ))}
     </div>
   );
