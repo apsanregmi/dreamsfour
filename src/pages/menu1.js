@@ -6,7 +6,6 @@ import menuData from "../data/menu.json";
 import OrderSummary from "../components/MenuList/OrderSummary";
 import Home3Testimonial from "../components/testimonial/Home3Testimonial";
 
-
 function Menu1() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -42,7 +41,7 @@ function Menu1() {
     <Layout>
       {/* <Breadcrumb pageName="Menu List-01" pageTitle="Menu List-01" /> */}
       <div>
-        <div className="mt-28 flex justify-between gap-10 px-4 lg:px-0">
+        <div className="mt-28 flex flex-col lg:flex-row justify-between gap-10 px-4 lg:px-0">
           {/* Left Side: Menu Filter and Recommendations */}
           <div className="w-full lg:w-2/3">
             <FilterAndRecommend addToCart={addToCart} />
@@ -57,6 +56,7 @@ function Menu1() {
             />
           </div>
         </div>
+
         <div className="indian-menu pt-120">
           <div className="container">
             <div className="row">
@@ -666,7 +666,6 @@ function Menu1() {
         </div>
       </div>
       <Home3Testimonial />
-
     </Layout>
   );
 }

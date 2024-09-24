@@ -1,21 +1,22 @@
 import React from 'react';
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, index }) => {
   return (
-    <div className="border-b border-gray-200 py-4 flex justify-between items-center">
-      <div className="flex items-center">
-        <img
-          src={item.image}
-          alt={item.slideTitle}
-          className="rounded-full w-10 h-10 object-cover"
-        />
-        <div className="ml-4">
-          <h4 className="text-lg font-semibold">{item.slideCategoryTitle}</h4>
-          <p className="text-sm text-gray-600">{item.description}</p>
-        </div>
+    <li className="flex items-center space-x-4">
+      {/* Displaying the Image */}
+      <div className="w-12 h-12 flex-shrink-0 rounded-full overflow-hidden">
+        <img src={item.image} alt={item.slideCategoryTitle} className="w-full h-full object-cover" />
       </div>
-      <span className="text-lg font-bold">{item.price}</span>
-    </div>
+      
+      {/* Menu Content */}
+      <div className="menu-content flex-1">
+        <div className="menu-title flex justify-between items-center">
+          <h4 className="text-lg font-semibold">{item.slideCategoryTitle}</h4>
+          <span className="text-lg font-bold text-gray-700">${item.price}</span>
+        </div>
+        <p className="text-sm text-gray-500">{item.description}</p>
+      </div>
+    </li>
   );
 };
 
