@@ -1,12 +1,18 @@
 import React from "react";
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
+import FilterAndRecommend from "../components/MenuList/FilterAndRecommend";
+import menuData from "../data/menu.json";
 
 function Menu1() {
   return (
     <Layout>
-      <Breadcrumb pageName="Menu List-01" pageTitle="Menu List-01" />
+      {/* <Breadcrumb pageName="Menu List-01" pageTitle="Menu List-01" /> */}
       <div>
+        <div className="mt-28">
+        <FilterAndRecommend/>
+
+        </div>
         <div className="indian-menu pt-120">
           <div className="container">
             <div className="row">
