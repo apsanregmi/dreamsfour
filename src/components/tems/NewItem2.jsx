@@ -1,7 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import NewItemCard from "./NewItemCard"; // Import the NewItemCard component
 SwiperCore.use([Navigation, Autoplay, EffectFade]);
 import newItemData from "../../data/newItem.json";
 
@@ -84,24 +84,14 @@ function NewItem2() {
               <div className="swiper-wrapper">
                 {newItemData.newItems.map((item) => (
                   <SwiperSlide key={item.id} className="swiper-slide">
-                    <div className="reguler-items-wrap">
-                      <div className="item-img">
-                        <img
-                          className="img-fluid"
-                          src={item.image}
-                          alt={item.slideCategoryTitle}
-                        />
-                        <div className="price">
-                          <h5>{item.price}</h5>
-                        </div>
-                      </div>
-                      <div className="reguler-items-content">
-                        <h3>
-                          <Link href="/shop-details">{item.slideTitle}</Link>
-                        </h3>
-                        <p>{item.description}</p>
-                      </div>
-                    </div>
+                    {/* Pass the correct props from newItem.json */}
+                    <NewItemCard
+                      id={item.id}
+                      image={item.image}
+                      slideTitle={item.slideTitle}
+                      description={item.description}
+                      price={item.price}
+                    />
                   </SwiperSlide>
                 ))}
               </div>

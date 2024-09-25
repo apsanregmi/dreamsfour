@@ -1,57 +1,57 @@
 {
     "newItems": [
       {
-        "id": 1,
+        "id": 111,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Veg",
         "foodCategory": "Snacks",
         "slideCategoryTitle": "Paneer Tikka",
-        "slideTitle": "Delicious Paneer Tikka",
+        "slideTitle": "New Delicious Paneer Tikka",
         "description": "Grilled paneer marinated in spices and served with mint chutney.",
         "price": "$70"
       },
       {
-        "id": 2,
+        "id": 112,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Veg",
         "foodCategory": "Snacks",
         "slideCategoryTitle": "Spring Rolls",
-        "slideTitle": "Crispy Spring Rolls",
+        "slideTitle": "New Crispy Spring Rolls",
         "description": "Vegetable-stuffed crispy rolls served with a sweet chili sauce.",
         "price": "$40"
       },
       {
-        "id": 3,
+        "id": 113,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Non-Veg",
         "foodCategory": "Lunch",
         "slideCategoryTitle": "Grilled Chicken",
-        "slideTitle": "Spicy Grilled Chicken",
+        "slideTitle": "New Spicy Grilled Chicken",
         "description": "Juicy grilled chicken with a side of garlic mashed potatoes.",
         "price": "$90"
       },
       {
-        "id": 4,
+        "id": 114,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Veg",
         "foodCategory": "Beverages",
         "slideCategoryTitle": "Mango Smoothie",
-        "slideTitle": "Refreshing Mango Smoothie",
+        "slideTitle": "New Refreshing Mango Smoothie",
         "description": "A blend of ripe mangoes, yogurt, and honey.",
         "price": "$30"
       },
       {
-        "id": 5,
+        "id": 115,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Non-Veg",
         "foodCategory": "Dinner",
         "slideCategoryTitle": "Lamb Chops",
-        "slideTitle": "Herb-Crusted Lamb Chops",
+        "slideTitle": " New Herb-Crusted Lamb Chops",
         "description": "Tender lamb chops crusted with herbs and served with roasted vegetables.",
         "price": "$120"
       },
       {
-        "id": 6,
+        "id": 116,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Veg",
         "foodCategory": "Dinner",
@@ -61,7 +61,7 @@
         "price": "$60"
       },
       {
-        "id": 7,
+        "id": 117,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Non-Veg",
         "foodCategory": "Snacks",
@@ -71,7 +71,7 @@
         "price": "$50"
       },
       {
-        "id": 8,
+        "id": 118,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Non-Veg",
         "foodCategory": "Lunch",
@@ -81,7 +81,7 @@
         "price": "$80"
       },
       {
-        "id": 9,
+        "id": 119,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Veg",
         "foodCategory": "Breakfast",
@@ -91,7 +91,7 @@
         "price": "$25"
       },
       {
-        "id": 10,
+        "id": 120,
         "image": "assets/images/usedImages/img1.png",
         "foodType": "Non-Veg",
         "foodCategory": "Lunch",

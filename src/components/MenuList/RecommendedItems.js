@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import menuData from "..//../data/menu.json"; // Assuming your data is stored here
+import menuData from "../../data/menu.json"; // Assuming your data is stored here
+import newItemData from "../../data/newItem.json"; // Import newItem.json as well
 
 const RecommendedItem = ({ addToCart }) => {
   const router = useRouter();
@@ -10,9 +11,18 @@ const RecommendedItem = ({ addToCart }) => {
 
   useEffect(() => {
     if (recommendedItemId) {
-      // Find the item with the matching ID in the menuData
-      const item = menuData.menu.find((i) => i.id === parseInt(recommendedItemId, 10));
-      setRecommendedItem(item);
+      // Find the item with the matching ID in menuData or newItemData
+      const menuItem = menuData.menu.find((i) => i.id === parseInt(recommendedItemId, 10));
+      const newItem = newItemData.newItems.find((i) => i.id === parseInt(recommendedItemId, 10));
+
+      // Set the recommended item if found in either JSON file
+      if (menuItem) {
+        setRecommendedItem(menuItem);
+      } else if (newItem) {
+        setRecommendedItem(newItem);
+      } else {
+        setRecommendedItem(null); // Optional: handle case where no match is found
+      }
     }
   }, [recommendedItemId]); // Update when the query changes
 
@@ -25,11 +35,13 @@ const RecommendedItem = ({ addToCart }) => {
       <div className="flex items-center">
         <img
           src={recommendedItem.image}
-          alt={recommendedItem.slideCategoryTitle}
+          alt={recommendedItem.slideTitle||recommendedItem.slideCategoryTitle } // Handle both names
           className="rounded-full w-16 h-16 object-cover"
         />
         <div className="ml-4">
-          <h3 className="text-xl font-bold text-gray-900">{recommendedItem.slideCategoryTitle}</h3>
+          <h3 className="text-xl font-bold text-gray-900">
+            {recommendedItem.slideTitle||recommendedItem.slideCategoryTitle} {/* Handle both names */}
+          </h3>
           <p className="text-gray-600">{recommendedItem.description}</p>
         </div>
       </div>
