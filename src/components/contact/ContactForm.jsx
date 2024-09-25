@@ -1,6 +1,54 @@
-import React from "react";
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-function ContactForm() {
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    consent: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID
+      );
+
+      if (res.status === 200) {
+        alert('Message sent successfully! We will get back to you soon.');
+
+        // Reset the form
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+          consent: false,
+        });
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert("Can't send, please check and try again.");
+    }
+  };
+
   return (
     <div className="container">
       <div className="contact-form mb-120 mt-120">
@@ -26,35 +74,55 @@ function ContactForm() {
         </div>
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="row justify-content-center">
                 <div className="col-lg-6 col-md-6 mb-25">
                   <div className="form-inner">
-                    <input type="text" placeholder="Name*" />
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Name*"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 mb-25">
                   <div className="form-inner">
-                    <input type="email" placeholder="Email*" />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email*"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="col-lg-12">
                   <div className="form-inner">
-                    <textarea placeholder="Message ..." defaultValue={""} />
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Message ..."
+                      rows={3}
+                      required
+                    />
                   </div>
                 </div>
                 <div className="col-lg-12 mb-40">
                   <div className="form-inner2">
                     <input
                       type="checkbox"
-                      id="vehicle1"
-                      name="vehicle1"
-                      defaultValue="Bike"
+                      id="consent"
+                      name="consent"
+                      checked={formData.consent}
+                      onChange={handleChange}
                     />
-                    <label htmlFor="vehicle1">
-                      {" "}
-                      Please save my name, email for the next time when I
-                      comment.{" "}
+                    <label htmlFor="consent">
+                      Please save my name, email for the next time when I comment.
                     </label>
                   </div>
                 </div>
@@ -70,6 +138,6 @@ function ContactForm() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactForm;
