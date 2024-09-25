@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import menuData from "../menu.json"; // Assuming the JSON is in the same directory
 import menuData from "../../data/menu.json";
 
 SwiperCore.use([Navigation, Autoplay, EffectFade]);
@@ -70,8 +69,8 @@ function Product1() {
                 </div>
                 <div className="product-content">
                   <h4>
-                    <Link href="/menu1" legacyBehavior>
-                      {/* Link now points to /menu1 */}
+                    {/* Pass the item ID via query params */}
+                    <Link legacyBehavior href={{ pathname: "/menu1", query: { recommendedItemId: item.id } }}>
                       <a>{item.slideCategoryTitle}</a>
                     </Link>
                   </h4>
