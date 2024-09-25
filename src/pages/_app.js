@@ -1,6 +1,8 @@
 // import all css
 import { useEffect } from "react";
 import SmoothPageScroll from "../components/common/SmoothPageScroll";
+import 'swiper/swiper-bundle.css';
+
 import "../styles/main.css";
 import '../styles/tailwind.css';
 

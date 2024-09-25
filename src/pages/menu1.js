@@ -90,8 +90,10 @@ function Menu1() {
           />
         </div>
       </div>
+<div className="mt-10">
+<Home3Testimonial />
 
-      <Home3Testimonial />
+</div>
     </Layout>
   );
 }

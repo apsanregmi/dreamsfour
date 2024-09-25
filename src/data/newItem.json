@@ -1,0 +1,105 @@
+{
+    "newItems": [
+      {
+        "id": 1,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Veg",
+        "foodCategory": "Snacks",
+        "slideCategoryTitle": "Paneer Tikka",
+        "slideTitle": "Delicious Paneer Tikka",
+        "description": "Grilled paneer marinated in spices and served with mint chutney.",
+        "price": "$70"
+      },
+      {
+        "id": 2,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Veg",
+        "foodCategory": "Snacks",
+        "slideCategoryTitle": "Spring Rolls",
+        "slideTitle": "Crispy Spring Rolls",
+        "description": "Vegetable-stuffed crispy rolls served with a sweet chili sauce.",
+        "price": "$40"
+      },
+      {
+        "id": 3,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Non-Veg",
+        "foodCategory": "Lunch",
+        "slideCategoryTitle": "Grilled Chicken",
+        "slideTitle": "Spicy Grilled Chicken",
+        "description": "Juicy grilled chicken with a side of garlic mashed potatoes.",
+        "price": "$90"
+      },
+      {
+        "id": 4,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Veg",
+        "foodCategory": "Beverages",
+        "slideCategoryTitle": "Mango Smoothie",
+        "slideTitle": "Refreshing Mango Smoothie",
+        "description": "A blend of ripe mangoes, yogurt, and honey.",
+        "price": "$30"
+      },
+      {
+        "id": 5,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Non-Veg",
+        "foodCategory": "Dinner",
+        "slideCategoryTitle": "Lamb Chops",
+        "slideTitle": "Herb-Crusted Lamb Chops",
+        "description": "Tender lamb chops crusted with herbs and served with roasted vegetables.",
+        "price": "$120"
+      },
+      {
+        "id": 6,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Veg",
+        "foodCategory": "Dinner",
+        "slideCategoryTitle": "Vegetable Stir-fry",
+        "slideTitle": "Healthy Vegetable Stir-fry",
+        "description": "A mix of seasonal vegetables stir-fried in a light soy sauce.",
+        "price": "$60"
+      },
+      {
+        "id": 7,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Non-Veg",
+        "foodCategory": "Snacks",
+        "slideCategoryTitle": "Chicken Wings",
+        "slideTitle": "Buffalo Chicken Wings",
+        "description": "Crispy chicken wings tossed in spicy buffalo sauce.",
+        "price": "$50"
+      },
+      {
+        "id": 8,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Non-Veg",
+        "foodCategory": "Lunch",
+        "slideCategoryTitle": "Fish Tacos",
+        "slideTitle": "Crispy Fish Tacos",
+        "description": "Crispy fish fillets in a taco shell with fresh salsa.",
+        "price": "$80"
+      },
+      {
+        "id": 9,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Veg",
+        "foodCategory": "Breakfast",
+        "slideCategoryTitle": "Avocado Toast",
+        "slideTitle": "Healthy Avocado Toast",
+        "description": "Creamy avocado spread on toasted sourdough bread.",
+        "price": "$25"
+      },
+      {
+        "id": 10,
+        "image": "assets/images/usedImages/img1.png",
+        "foodType": "Non-Veg",
+        "foodCategory": "Lunch",
+        "slideCategoryTitle": "Shrimp Scampi",
+        "slideTitle": "Garlic Shrimp Scampi",
+        "description": "Shrimp sautéed in garlic butter sauce served with pasta.",
+        "price": "$100"
+      }
+    ]
+  }
+  

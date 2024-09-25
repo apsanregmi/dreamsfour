@@ -60,14 +60,20 @@ function Product1() {
           {menuItems.map((item) => (
             <SwiperSlide key={item.id} className="swiper-slide">
               <div className="product-wrap">
-                <div className="product-img">
+                <div className="product-img" style={{ textAlign: "center" }}>
                   <img
                     className="img-fluid"
                     src={item.image}
                     alt={item.slideTitle}
+                    style={{
+                      width: "150px",
+                      height: "150px",
+                      borderRadius: "50%", // Make the image circular
+                      objectFit: "cover", // Ensure the image fills the circle
+                    }}
                   />
                 </div>
-                <div className="product-content">
+                <div className="product-content" style={{ textAlign: "center", marginTop: "15px" }}>
                   <h4>
                     {/* Pass the item ID via query params */}
                     <Link legacyBehavior href={{ pathname: "/menu1", query: { recommendedItemId: item.id } }}>
@@ -75,7 +81,7 @@ function Product1() {
                     </Link>
                   </h4>
                   <p>{item.description}</p>
-                  <p>{item.price}</p>
+                  {/* <p>{item.price}</p> */}
                 </div>
               </div>
             </SwiperSlide>

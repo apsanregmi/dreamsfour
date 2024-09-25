@@ -66,19 +66,21 @@ function Gallary2() {
         <div className="row d-flex align-items-center justify-content-center mb-40">
           <div className="col-lg-8">
             <div className="section-title text-center">
-              <span>
-                <img
-                  className="left-vec"
-                  src="assets/images/icon/sub-title-vec.svg"
-                  alt="sub-title-vec"
-                />
-                Gallery Store
-                <img
-                  className="right-vec"
-                  src="assets/images/icon/sub-title-vec.svg"
-                  alt="sub-title-vec"
-                />
-              </span>
+            <div className="flex justify-center items-center space-x-2 ">
+            <img
+              className="left-vec w-6 h-6"
+              src="assets/images/icon/sub-title-vec.svg"
+              alt="sub-title-vec"
+            />
+            <span className="text-center text-lg text-gold font-medium">
+              Gallery Store
+            </span>
+            <img
+              className="right-vec w-6 h-6"
+              src="assets/images/icon/sub-title-vec.svg"
+              alt="sub-title-vec"
+            />
+          </div>
               <h2>Our Special Gallery</h2>
             </div>
           </div>
@@ -94,7 +96,7 @@ function Gallary2() {
                   <img className="img-fluid" src={imageSmalll} alt="" />
                   <div className="overlay">
                     <img
-                      src="assets/images/icon/Zoom.svg"
+                      src="assets/images/icon/Zoom."
                       style={{ cursor: "pointer" }}
                       onClick={() =>
                         setOpenimg({ openingState: true, openingIndex: index })
