@@ -47,7 +47,7 @@ const MenuList = ({ items, addToCart }) => {
 
                 <div className="flex items-center">
                   <span className="text-xl font-semibold text-gray-800 mr-6">
-                    ${item.price}
+                    {item.price}
                   </span>
                   <button
                     onClick={() => addToCart(item)}
