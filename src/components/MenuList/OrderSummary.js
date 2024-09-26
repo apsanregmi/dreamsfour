@@ -22,11 +22,12 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
     router.push({
       pathname: '/check-out',
       query: {
-        cartItems: JSON.stringify(cartItems),
-        total: total.toFixed(2),
+        cartItems: JSON.stringify(cartItems), // Passing cart items as JSON string
+        total: total.toFixed(2), // Total price
       },
     });
   };
+  
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
