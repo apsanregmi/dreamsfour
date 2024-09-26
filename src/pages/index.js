@@ -9,11 +9,13 @@ import MenuList2 from "../components/MenuList/MenuList2";
 import Product1 from "../components/product/Product1";
 import Reservation2 from "../components/reservation/Reservation2";
 import NewItem2 from "../components/tems/NewItem2";
+import { BrowserRouter as Router } from 'react-router-dom'; 
 // import NewItem1 from "../components/tems/NewItem1";
 
 function IndexPage() {
   return (
     <>
+    {/* <Router> */}
       <Head>
         <title>4Dreams Nepali and Indian Cusine</title>
         <meta name="description" content="Discover your perfect blend of authentic & flavorful foods!" />
@@ -31,6 +33,7 @@ function IndexPage() {
       <About />
 
       <Footer />
+      {/* </Router> */}
     </>
   );
 }

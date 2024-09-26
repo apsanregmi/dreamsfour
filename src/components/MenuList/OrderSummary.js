@@ -1,7 +1,9 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
-  
+  const router = useRouter();
+
   // Calculate subtotal, tax, and total amount
   const calculateTotal = () => {
     const subtotal = cartItems.reduce(
@@ -15,6 +17,17 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
 
   const { subtotal, tax, total } = calculateTotal();
 
+  // Handle "Order Now" click to navigate to Checkout and pass cart data
+  const handleOrderNow = () => {
+    router.push({
+      pathname: '/check-out',
+      query: {
+        cartItems: JSON.stringify(cartItems),
+        total: total.toFixed(2),
+      },
+    });
+  };
+
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-xl font-semibold mb-4">Current Order</h2>
@@ -25,7 +38,7 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
       ) : (
         <div>
           {/* Scrollable Cart Items Section */}
-          <div className={`max-h-80 overflow-y-auto`}>
+          <div className="max-h-80 overflow-y-auto">
             {/* Display each cart item */}
             {cartItems.map((item, index) => (
               <div
@@ -84,7 +97,10 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
               Rs {total.toFixed(2)}
             </span>
           </div>
-          <button className="w-full mt-4 py-2 bg-black text-white font-semibold rounded-lg">
+          <button
+            onClick={handleOrderNow}
+            className="w-full mt-4 py-2 bg-black text-white font-semibold rounded-lg"
+          >
             Order Now
           </button>
         </div>
