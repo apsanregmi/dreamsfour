@@ -6,6 +6,7 @@ import PlaceOrderButton from "../components/checkout/PlaceOrderButton";
 import Breadcrumb from "../components/common/Breadcrumb";
 import { useRouter } from 'next/router'; // Import useRouter for query params
 import Layout from "../layout/Layout";
+import emailjs from "emailjs-com"; // Add emailjs for sending emails
 
 const Checkout = () => {
   const router = useRouter();
@@ -32,12 +33,13 @@ const Checkout = () => {
     postcode: "",
   });
 
+  const [useShipping, setUseShipping] = useState(false); // Track whether shipping details are filled
   const [total, setTotal] = useState(0);
   const [paymentMethod, setPaymentMethod] = useState("");
-  const [deliveryMethod, setDeliveryMethod] = useState('pickup');
+  const [deliveryMethod, setDeliveryMethod] = useState("pickup");
   const [errors, setErrors] = useState({});
+  const [orderID, setOrderID] = useState(""); // Create order ID state
 
-  // Parse cart items and set total from query parameters
   useEffect(() => {
     if (cartItemsQuery) {
       setCartItems(JSON.parse(cartItemsQuery)); // Parse cart items from query string
@@ -46,6 +48,11 @@ const Checkout = () => {
       setCartTotal(parseFloat(totalQuery)); // Set cart total from query string
       setTotal(parseFloat(totalQuery)); // No additional tax added
     }
+
+    // Generate a simple order ID using timestamp
+    const newOrderID = `ORD-${Date.now()}`;
+    setOrderID(newOrderID); // Set the generated order ID in state
+
   }, [cartItemsQuery, totalQuery]);
 
   const handleBillingChange = (e) => {
@@ -62,6 +69,7 @@ const Checkout = () => {
       ...prevDetails,
       [name]: value,
     }));
+    setUseShipping(true); // Set shipping used when shipping address is updated
   };
 
   const handlePaymentMethodChange = (e) => {
@@ -72,7 +80,6 @@ const Checkout = () => {
     setDeliveryMethod(e.target.value);
   };
 
-  // Validate all fields
   const validateFields = () => {
     const newErrors = {};
 
@@ -85,7 +92,7 @@ const Checkout = () => {
 
     // Validate payment method
     if (!paymentMethod) {
-      newErrors.paymentMethod = 'Please select a payment method';
+      newErrors.paymentMethod = "Please select a payment method";
     }
 
     setErrors(newErrors);
@@ -94,8 +101,43 @@ const Checkout = () => {
 
   const handlePlaceOrder = () => {
     if (validateFields()) {
-      // Proceed with placing the order (e.g., integrate with payment gateway)
-      console.log("Placing order...");
+      const orderDetails = {
+        cartItems,
+        cartTotal: total,
+        order_id: orderID,  // Add order ID to the order details
+        billing_firstName: billingDetails.firstName,
+        billing_lastName: billingDetails.lastName,
+        billing_address: billingDetails.address,
+        billing_city: billingDetails.city,
+        billing_postcode: billingDetails.postcode,
+        billing_phone: billingDetails.phone,
+        billing_email: billingDetails.email,
+        shipping_firstName: shippingDetails.firstName || '',
+        shipping_lastName: shippingDetails.lastName || '',
+        shipping_address: shippingDetails.address || '',
+        shipping_city: shippingDetails.city || '',
+        shipping_postcode: shippingDetails.postcode || '',
+        paymentMethod,
+        deliveryMethod,
+      };
+
+      // Send the order details to the specified email
+      emailjs
+        .send(
+          "service_exzwj4m", // Replace with your EmailJS service ID
+          "template_xben0ql", // Replace with your EmailJS template ID
+          orderDetails,
+          "a3U6hCUlpaUQhJpU_" // Replace with your EmailJS user ID
+        )
+        .then(
+          (result) => {
+            console.log("Email successfully sent!", result.text);
+            alert("Order placed successfully!");
+          },
+          (error) => {
+            console.log("Failed to send email.", error.text);
+          }
+        );
     } else {
       console.log("Fix validation errors before submitting");
     }
