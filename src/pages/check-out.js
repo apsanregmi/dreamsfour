@@ -4,9 +4,9 @@ import ShippingDetails from "../components/checkout/ShippingDetails";
 import OrderSummary2 from "../components/checkout/OrderSummary2";
 import PlaceOrderButton from "../components/checkout/PlaceOrderButton";
 import Breadcrumb from "../components/common/Breadcrumb";
-import { useRouter } from 'next/router'; // Import useRouter for query params
+import { useRouter } from 'next/router';
 import Layout from "../layout/Layout";
-import emailjs from "emailjs-com"; // Add emailjs for sending emails
+import emailjs from "emailjs-com";
 
 const Checkout = () => {
   const router = useRouter();
@@ -33,25 +33,24 @@ const Checkout = () => {
     postcode: "",
   });
 
-  const [useShipping, setUseShipping] = useState(false); // Track whether shipping details are filled
+  const [useShipping, setUseShipping] = useState(false);
   const [total, setTotal] = useState(0);
   const [paymentMethod, setPaymentMethod] = useState("");
   const [deliveryMethod, setDeliveryMethod] = useState("pickup");
   const [errors, setErrors] = useState({});
-  const [orderID, setOrderID] = useState(""); // Create order ID state
+  const [orderID, setOrderID] = useState("");
 
   useEffect(() => {
     if (cartItemsQuery) {
-      setCartItems(JSON.parse(cartItemsQuery)); // Parse cart items from query string
+      setCartItems(JSON.parse(cartItemsQuery));
     }
     if (totalQuery) {
-      setCartTotal(parseFloat(totalQuery)); // Set cart total from query string
-      setTotal(parseFloat(totalQuery)); // No additional tax added
+      setCartTotal(parseFloat(totalQuery));
+      setTotal(parseFloat(totalQuery));
     }
 
-    // Generate a simple order ID using timestamp
     const newOrderID = `ORD-${Date.now()}`;
-    setOrderID(newOrderID); // Set the generated order ID in state
+    setOrderID(newOrderID);
 
   }, [cartItemsQuery, totalQuery]);
 
@@ -69,7 +68,7 @@ const Checkout = () => {
       ...prevDetails,
       [name]: value,
     }));
-    setUseShipping(true); // Set shipping used when shipping address is updated
+    setUseShipping(true);
   };
 
   const handlePaymentMethodChange = (e) => {
@@ -83,14 +82,12 @@ const Checkout = () => {
   const validateFields = () => {
     const newErrors = {};
 
-    // Validate billing details
     Object.keys(billingDetails).forEach((field) => {
       if (!billingDetails[field]) {
         newErrors[`billing_${field}`] = `Please fill in your billing ${field}`;
       }
     });
 
-    // Validate payment method
     if (!paymentMethod) {
       newErrors.paymentMethod = "Please select a payment method";
     }
@@ -104,7 +101,7 @@ const Checkout = () => {
       const orderDetails = {
         cartItems,
         cartTotal: total,
-        order_id: orderID,  // Add order ID to the order details
+        order_id: orderID,
         billing_firstName: billingDetails.firstName,
         billing_lastName: billingDetails.lastName,
         billing_address: billingDetails.address,
@@ -121,13 +118,12 @@ const Checkout = () => {
         deliveryMethod,
       };
 
-      // Send the order details to the specified email
       emailjs
         .send(
-          "service_exzwj4m", // Replace with your EmailJS service ID
-          "template_xben0ql", // Replace with your EmailJS template ID
+          "service_exzwj4m",
+          "template_xben0ql",
           orderDetails,
-          "a3U6hCUlpaUQhJpU_" // Replace with your EmailJS user ID
+          "a3U6hCUlpaUQhJpU_"
         )
         .then(
           (result) => {
@@ -152,7 +148,7 @@ const Checkout = () => {
             <BillingDetails
               billingDetails={billingDetails}
               handleBillingChange={handleBillingChange}
-              errors={errors} // Pass errors for validation
+              errors={errors}
             />
             <ShippingDetails
               shippingDetails={shippingDetails}
@@ -168,7 +164,7 @@ const Checkout = () => {
               handleDeliveryMethodChange={handleDeliveryMethodChange}
               handlePaymentMethodChange={handlePaymentMethodChange}
               paymentMethod={paymentMethod}
-              errors={errors} // Pass errors for validation
+              errors={errors}
             />
             <PlaceOrderButton handlePlaceOrder={handlePlaceOrder} />
           </div>

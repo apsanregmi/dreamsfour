@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
+import CloverPaymentPopup from './CloverPaymentPopup';
 
 const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodChange, handlePaymentMethodChange, paymentMethod, errors }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(false);
+
+  // Function to handle payment method change
+  const handlePaymentSelect = (event) => {
+    handlePaymentMethodChange(event);
+    if (event.target.value === 'clover') {
+      setIsPopupOpen(true); // Open the payment popup when "Clover" is selected
+    }
+  };
+
   return (
     <div>
       <h3 className="text-lg font-medium">Order Summary</h3>
       <div className="max-h-80 overflow-y-auto">
-        {/* Display each cart item */}
         {cartItems.map((item, index) => (
           <div key={index} className="flex items-center justify-between py-2 border-b border-gray-300">
             <div className="flex items-center">
               <img src={item.image} alt={item.slideTitle} className="w-12 h-12 rounded-full mr-3" />
               <div>
                 <h4 className="font-medium text-gray-900">{item.slideTitle}</h4>
-                <p className="text-gray-600">
-                  {item.price} × {item.quantity}
-                </p>
+                <p className="text-gray-600">{item.price} × {item.quantity}</p>
               </div>
             </div>
           </div>
@@ -24,11 +33,7 @@ const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodC
       {/* Delivery or Pickup Option */}
       <div className="mt-6">
         <label className="block mb-2 text-sm font-medium text-gray-700">Choose Delivery Method</label>
-        <select
-          value={deliveryMethod}
-          onChange={handleDeliveryMethodChange}
-          className="w-full p-2 border border-gray-300 rounded-lg"
-        >
+        <select value={deliveryMethod} onChange={handleDeliveryMethodChange} className="w-full p-2 border border-gray-300 rounded-lg">
           <option value="pickup">Pickup</option>
           <option value="delivery">Delivery</option>
         </select>
@@ -49,19 +54,22 @@ const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodC
         {/* Payment Method */}
         <div className="mt-4">
           <label className="block mb-2 text-sm font-medium text-gray-700">Select Payment Method</label>
-          <select
-            value={paymentMethod}
-            onChange={handlePaymentMethodChange}
-            className="w-full p-2 border border-gray-300 rounded-lg"
-          >
+          <select value={paymentMethod} onChange={handlePaymentSelect} className="w-full p-2 border border-gray-300 rounded-lg">
             <option value="">Select Method</option>
             <option value="clover">Clover</option>
           </select>
-          {errors.paymentMethod && (
-            <span className="text-red-500 text-sm mt-2">{errors.paymentMethod}</span>
-          )}
+          {errors.paymentMethod && <span className="text-red-500 text-sm mt-2">{errors.paymentMethod}</span>}
         </div>
       </div>
+
+      {/* Render the Clover Payment Popup */}
+      {isPopupOpen && (
+        <CloverPaymentPopup
+          total={total}
+          onClose={() => setIsPopupOpen(false)}
+          onPaymentSuccess={() => setIsPaymentSuccessful(true)} // Update payment status on success
+        />
+      )}
     </div>
   );
 };
