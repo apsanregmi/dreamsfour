@@ -26,7 +26,7 @@ export const prepareEmailData = (orderDetails) => {
     const cartItemsString = cartItems
       .map(
         (item) =>
-          `Title: ${item.slideTitle}, Price: Rs ${item.price}, Quantity: ${item.quantity}`
+          `Title: ${item.slideTitle}, Price:  ${item.price}, Quantity: ${item.quantity}`
       )
       .join("\n");
   
