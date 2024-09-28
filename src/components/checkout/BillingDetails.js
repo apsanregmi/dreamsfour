@@ -12,7 +12,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="text"
               name="firstName"
-              value={billingDetails.firstName}
+              value={billingDetails.billing_firstName}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -27,7 +27,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="text"
               name="lastName"
-              value={billingDetails.lastName}
+              value={billingDetails.billing_lastName}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -42,7 +42,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="text"
               name="country"
-              value={billingDetails.country}
+              value={billingDetails.billing_country}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -57,7 +57,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="text"
               name="address"
-              value={billingDetails.address}
+              value={billingDetails.billing_address}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -72,7 +72,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="text"
               name="city"
-              value={billingDetails.city}
+              value={billingDetails.billing_city}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -87,7 +87,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="text"
               name="postcode"
-              value={billingDetails.postcode}
+              value={billingDetails.billing_postcode}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -102,7 +102,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="tel"
               name="phone"
-              value={billingDetails.phone}
+              value={billingDetails.billing_phone}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />
@@ -117,7 +117,7 @@ const BillingDetails = ({ billingDetails, handleBillingChange, errors }) => {
             <input
               type="email"
               name="email"
-              value={billingDetails.email}
+              value={billingDetails.billing_email}
               onChange={handleBillingChange}
               className="w-full p-2 border rounded-md"
             />

@@ -7,6 +7,7 @@ import Breadcrumb from "../components/common/Breadcrumb";
 import { useRouter } from 'next/router';
 import Layout from "../layout/Layout";
 import emailjs from "emailjs-com";
+import { prepareEmailData } from "./prepareEmailData";
 
 const Checkout = () => {
   const router = useRouter();
@@ -109,22 +110,20 @@ const Checkout = () => {
         billing_postcode: billingDetails.postcode,
         billing_phone: billingDetails.phone,
         billing_email: billingDetails.email,
-        shipping_firstName: shippingDetails.firstName || '',
-        shipping_lastName: shippingDetails.lastName || '',
-        shipping_address: shippingDetails.address || '',
-        shipping_city: shippingDetails.city || '',
-        shipping_postcode: shippingDetails.postcode || '',
+        shipping_firstName: shippingDetails.firstName || "",
+        shipping_lastName: shippingDetails.lastName || "",
+        shipping_address: shippingDetails.address || "",
+        shipping_city: shippingDetails.city || "",
+        shipping_postcode: shippingDetails.postcode || "",
         paymentMethod,
         deliveryMethod,
       };
-
+  
+      // Prepare the email data using the utility function
+      const formattedEmailData = prepareEmailData(orderDetails);
+  
       emailjs
-        .send(
-          "service_exzwj4m",
-          "template_xben0ql",
-          orderDetails,
-          "a3U6hCUlpaUQhJpU_"
-        )
+        .send("service_exzwj4m", "template_xben0ql", formattedEmailData, "a3U6hCUlpaUQhJpU_")
         .then(
           (result) => {
             console.log("Email successfully sent!", result.text);
@@ -138,7 +137,6 @@ const Checkout = () => {
       console.log("Fix validation errors before submitting");
     }
   };
-
   return (
     <Layout>
       <Breadcrumb pageName="Checkout" pageTitle="Checkout" />
