@@ -7,7 +7,7 @@ import Breadcrumb from "../components/common/Breadcrumb";
 import { useRouter } from 'next/router';
 import Layout from "../layout/Layout";
 import emailjs from "emailjs-com";
-import { prepareEmailData } from "./prepareEmailData";
+import { prepareEmailData } from "../../util/prepareEmailData";
 
 const Checkout = () => {
   const router = useRouter();
