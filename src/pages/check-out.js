@@ -123,7 +123,7 @@ const Checkout = () => {
       const formattedEmailData = prepareEmailData(orderDetails);
   
       emailjs
-        .send("service_exzwj4m", "template_xben0ql", formattedEmailData, "a3U6hCUlpaUQhJpU_")
+        .send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID_MENU, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_MENU, formattedEmailData, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID_MENU)
         .then(
           (result) => {
             console.log("Email successfully sent!", result.text);

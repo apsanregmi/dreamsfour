@@ -57,6 +57,7 @@ const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodC
           <select value={paymentMethod} onChange={handlePaymentSelect} className="w-full p-2 border border-gray-300 rounded-lg">
             <option value="">Select Method</option>
             <option value="clover">Clover</option>
+            <option value="cash-on-pickup">Cash on pick up</option>
           </select>
           {errors.paymentMethod && <span className="text-red-500 text-sm mt-2">{errors.paymentMethod}</span>}
         </div>

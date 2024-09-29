@@ -36,6 +36,12 @@ const CloverPaymentPopup = ({ total, onClose, onPaymentSuccess }) => {
     <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg">
         <h2 className="text-xl font-semibold mb-4">Enter Payment Details</h2>
+        
+        {/* Inform the user about future Clover integration */}
+        <p className="text-sm text-gray-600 mb-4">
+          Please note: This payment interface will soon be upgraded with Clover integration for secure transactions. Currently, no real payments are processed.
+        </p>
+        
         <div className="mb-4">
           <label className="block mb-2">Card Number</label>
           <input
@@ -44,6 +50,7 @@ const CloverPaymentPopup = ({ total, onClose, onPaymentSuccess }) => {
             value={paymentDetails.cardNumber}
             onChange={handleInputChange}
             className="w-full p-2 border border-gray-300 rounded-lg"
+            disabled
           />
         </div>
         <div className="mb-4">
@@ -54,6 +61,7 @@ const CloverPaymentPopup = ({ total, onClose, onPaymentSuccess }) => {
             value={paymentDetails.expirationDate}
             onChange={handleInputChange}
             className="w-full p-2 border border-gray-300 rounded-lg"
+            disabled
           />
         </div>
         <div className="mb-4">
@@ -64,6 +72,7 @@ const CloverPaymentPopup = ({ total, onClose, onPaymentSuccess }) => {
             value={paymentDetails.cvv}
             onChange={handleInputChange}
             className="w-full p-2 border border-gray-300 rounded-lg"
+            disabled
           />
         </div>
 
