@@ -32,25 +32,31 @@ function Banner3() {
 
       {/* Opening Hours Section */}
       <div className="open-time">
-        <div className="left-vect">
-          <img src="assets/images/bg/open-vec-left.png" alt="Decoration" />
+        {/* <div className="left-vect">
+          <img src="assets/images/bg/open-vec-left..png" alt="Decoration" />
         </div>
         <div className="right-vect">
           <img src="assets/images/bg/open-vec-right.png" alt="Decoration" />
-        </div>
-        <p>
+        </div> */}
+        <div className="flex space-x-4">
+
+        
           <img
-            className="left-vec"
+            className="left-vec w-16"
             src="assets/images/icon/h3-open-vec.svg"
             alt="Left Decoration"
           />
+          <p>
           Our Restho Restaurant is Open from 9:30 AM to 9:00 PM
+          </p>
           <img
-            className="right-vec"
+            className="right-vec w-16"
             src="assets/images/icon/h3-open-vec.svg"
             alt="Right Decoration"
           />
-        </p>
+        
+        </div>
+
       </div>
 
       {/* Video Banner Section */}
@@ -60,20 +66,21 @@ function Banner3() {
         </video>
 
         {/* Banner Content */}
-        <div className="banner-content text-center">
-          <span className="banner-subtitle">
+        <div className="  banner-content text-center">
+          <div className="banner-subtitle flex items-center justify-center">
             <img
               className="left-vec"
               src="assets/images/icon/h3-sub-title-vec.svg"
               alt="Left Decoration"
-            />
+            /><div className="text-xl  px-4 text-yellow-400 font-bold">
             Welcome To Restho
+          </div>
             <img
               className="right-vec"
               src="assets/images/icon/h3-sub-title-vec.svg"
               alt="Right Decoration"
             />
-          </span>
+          </div>
           <h1>Find Your Best Healthy &amp; Tasty Food.</h1>
 
           {/* Discover More Button */}

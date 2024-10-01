@@ -52,18 +52,21 @@ function Banner() {
             <div className="banner-wrapper d-flex align-items-center justify-content-between">
               <div className="banner-content">
                 <span>
+                  <div className="flex">
                   <img
                     className="left-vec"
                     src="assets/images/icon/sub-title-vec.svg"
                     alt="sub-title-vec"
                   />
-                  <h1 className="text-red-400"> welcome to Nepal</h1>
-                  Welcome to 4Dreams Nepali & Indian Cuisine
+                  <h1 className="text-red-400"> Welcome to Nepal</h1>
                   <img
                     className="right-vec"
                     src="assets/images/icon/sub-title-vec.svg"
                     alt="sub-title-vec"
                   />
+                  </div>
+                  Welcome to 4Dreams Nepali & Indian Cuisine
+                  
                 </span>
                 <h1>Discover your perfect blend of authentic &amp; flavorful foods!</h1>
                 <Link legacyBehavior href="/menu1">
@@ -76,22 +79,22 @@ function Banner() {
               <div className="banner-right">
                 <img
                   className="img-fluid h2-banner-img1"
-                  src="assets/images/bg/h2-banner-img1.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img1"
                 />
                 <img
                   className="img-fluid h2-banner-img3"
-                  src="assets/images/bg/h2-banner-img3.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img3"
                 />
                 <img
                   className="img-fluid h2-banner-img2"
-                  src="assets/images/bg/h2-banner-img2.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img2"
                 />
                 <img
                   className="img-fluid h2-banner-img4"
-                  src="assets/images/bg/h2-banner-img4.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img4"
                 />
               </div>
@@ -100,7 +103,8 @@ function Banner() {
           <SwiperSlide className="swiper-slide">
             <div className="banner-wrapper d-flex align-items-center justify-content-between">
               <div className="banner-content">
-                <span>
+                <span >
+                  <div className="flex">
                   <img
                     className="left-vec"
                     src="assets/images/icon/sub-title-vec.svg"
@@ -112,6 +116,9 @@ function Banner() {
                     src="assets/images/icon/sub-title-vec.svg"
                     alt="sub-title-vec"
                   />
+
+                  </div>
+                  
                 </span>
                 <h1>Discover your perfect blend of authentic &amp; flavorful foods!</h1>
                 <Link legacyBehavior href="/about">
@@ -124,22 +131,22 @@ function Banner() {
               <div className="banner-right">
                 <img
                   className="img-fluid h2-banner-img1"
-                  src="assets/images/bg/h2-banner-img11.png"
+                  src="assets/images/group/1.png"
                   alt="h2-banner-img1"
                 />
                 <img
                   className="img-fluid h2-banner-img3"
-                  src="assets/images/bg/h2-banner-img33.png"
+                  src="assets/images/group/2.png"
                   alt="h2-banner-img3"
                 />
                 <img
                   className="img-fluid h2-banner-img2"
-                  src="assets/images/bg/h2-banner-img22.png"
+                  src="assets/images/group/3.png"
                   alt="h2-banner-img2"
                 />
                 <img
                   className="img-fluid h2-banner-img4"
-                  src="assets/images/bg/h2-banner-img44.png"
+                  src="assets/images/group/1.png"
                   alt="h2-banner-img4"
                 />
               </div>
@@ -149,6 +156,7 @@ function Banner() {
             <div className="banner-wrapper d-flex align-items-center justify-content-between">
               <div className="banner-content">
                 <span>
+                  <div className="flex">
                   <img
                     className="left-vec"
                     src="assets/images/icon/sub-title-vec.svg"
@@ -160,9 +168,10 @@ function Banner() {
                     src="assets/images/icon/sub-title-vec.svg"
                     alt="sub-title-vec"
                   />
+                  </div>
                 </span>
                 <h1>Discover your perfect blend of authentic &amp; flavorful foods!</h1>
-                <Link legacyBehavior href="/about">
+                <Link legacyBehavior href="/menu1">
                   <a className="primary-btn5 btn-md2">
                     <i className="bi bi-arrow-up-right-circle" />
                     Order Now
@@ -170,26 +179,27 @@ function Banner() {
                 </Link>
               </div>
               <div className="banner-right">
-                <img
+              <img
                   className="img-fluid h2-banner-img1"
-                  src="assets/images/bg/h2-banner-img111.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img1"
                 />
                 <img
                   className="img-fluid h2-banner-img3"
-                  src="assets/images/bg/h2-banner-img333.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img3"
                 />
                 <img
                   className="img-fluid h2-banner-img2"
-                  src="assets/images/bg/h2-banner-img222.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img2"
                 />
                 <img
                   className="img-fluid h2-banner-img4"
-                  src="assets/images/bg/h2-banner-img444.png"
+                  src="assets/images/group/Group1.png"
                   alt="h2-banner-img4"
                 />
+
               </div>
             </div>
           </SwiperSlide>
