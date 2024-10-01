@@ -66,7 +66,7 @@ function Banner() {
                   />
                 </span>
                 <h1>Discover your perfect blend of authentic &amp; flavorful foods!</h1>
-                <Link legacyBehavior href="/about">
+                <Link legacyBehavior href="/menu1">
                   <a className="primary-btn5 btn-md2">
                     <i className="bi bi-arrow-up-right-circle" />
                     Order Now

@@ -9,6 +9,8 @@ import MenuList2 from "../components/MenuList/MenuList2";
 import Product1 from "../components/product/Product1";
 import Reservation2 from "../components/reservation/Reservation2";
 import NewItem2 from "../components/tems/NewItem2";
+import Banner3 from "../components/banner/Banner3";
+
 import { BrowserRouter as Router } from 'react-router-dom'; 
 // import NewItem1 from "../components/tems/NewItem1";
 
@@ -23,9 +25,11 @@ function IndexPage() {
         {/* <link rel="icon" href="assets/images/icon/logo-icon.svg" /> */}
       </Head>
       <Header />
-      <Banner />
+      <Banner3/>
       <Product1 />
       <NewItem2 />
+      <Banner />
+
       {/* <NewItem1/> */}
       <MenuList2 />
       <Gallary2 />
