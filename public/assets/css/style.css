@@ -5321,7 +5321,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
    11. Footer Area   
 =======================================*/
 footer {
-  background-image: linear-gradient(rgba(9, 22, 29, 0.9), rgba(9, 22, 29, 0.9)), url(../images/bg/footer-bg.png);
+  background-image: linear-gradient(rgba(9, 22, 29, 0.9), rgba(9, 22, 29, 0.9)), url(../images/bg/bg-2.png);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -5803,7 +5803,7 @@ footer .footer-btm .privacy-policy p a:hover {
    11. Home2 Reguler Item
 =======================================*/
 .h2-reguler-item {
-  background-image: linear-gradient(rgba(9, 22, 29, 0.8), rgba(9, 22, 29, 0.8)), url(../images/bg/h2-regular-items-bg.png);
+  background-image: linear-gradient(rgba(9, 22, 29, 0.8), rgba(9, 22, 29, 0.8)), url(../images/bg/bg-new.png);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6238,7 +6238,7 @@ footer .footer-btm .privacy-policy p a:hover {
    11. Home2 Reservation
 =======================================*/
 .h2-reservarion-area {
-  background-image: linear-gradient(rgba(9, 22, 29, 0.75), rgba(9, 22, 29, 0.75)), url(../images/bg/h2-reservation-bg.png);
+  background-image: linear-gradient(rgba(9, 22, 29, 0.75), rgba(9, 22, 29, 0.75)), url(../images/bg/bg-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

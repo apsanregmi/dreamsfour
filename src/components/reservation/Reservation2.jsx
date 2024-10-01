@@ -6,17 +6,18 @@ function Reservation2() {
   return (
     <div className="h2-reservarion-area mb-120">
       <div className="bg-vector">
-        <img
+        {/* <img
           className="img-fluid"
           src="assets/images/bg/h2-reservation-1.png"
           alt=""
-        />
+        /> */}
       </div>
       <div className="container">
         <div className="row d-flex align-items-center justify-content-center mb-40">
           <div className="col-lg-8">
             <div className="section-title text-center">
               <span>
+                <div className="flex">
                 <img
                   className="left-vec"
                   src="assets/images/icon/sub-title-vec.svg"
@@ -28,6 +29,7 @@ function Reservation2() {
                   src="assets/images/icon/sub-title-vec.svg"
                   alt="sub-title-vec"
                 />
+                </div>
               </span>
               <h2>For Online Reservation</h2>
             </div>

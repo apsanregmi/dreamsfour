@@ -13,22 +13,26 @@ function About() {
       <div className="about-left">
         <img
           className="img-fluid h2-about-img1"
-          src="assets/images/bg/h2-about-img1.png"
+          src="assets/images/usedImages/1.png"
           alt="h2-about-img1"
         />
         <img
           className="img-fluid h2-about-img3"
-          src="assets/images/bg/h2-about-img3.png"
+          src="assets/images/usedImages/2.png"
+          
           alt="h2-about-img3"
         />
         <img
           className="img-fluid h2-about-img2"
-          src="assets/images/bg/h2-about-img2.png"
+          
+          src="assets/images/usedImages/33.png"
+
           alt="h2-about-img2"
         />
         <img
           className="img-fluid h2-about-img4"
-          src="assets/images/bg/h2-about-img4.png"
+          src="assets/images/usedImages/4.png"
+          
           alt="h2-about-img4"
         />
       </div>
