@@ -27,7 +27,7 @@ function IndexPage() {
       <Header />
       <Banner3/>
       <Product1 />
-      <Banner />
+      {/* <Banner /> */}
       <NewItem2 />
 
 

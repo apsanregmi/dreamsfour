@@ -46,7 +46,7 @@ function Banner3() {
             src="assets/images/icon/h3-open-vec.svg"
             alt="Left Decoration"
           />
-          <p>
+          <p className="text-white">
           Our Restho Restaurant is Open from 9:30 AM to 9:00 PM
           </p>
           <img
@@ -72,7 +72,7 @@ function Banner3() {
               className="left-vec"
               src="assets/images/icon/h3-sub-title-vec.svg"
               alt="Left Decoration"
-            /><div className="text-xl  px-4 text-yellow-400 font-bold">
+            /><div className="text-xl  px-4 text-white font-bold ">
             Welcome To Restho
           </div>
             <img

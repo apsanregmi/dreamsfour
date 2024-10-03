@@ -2,7 +2,7 @@
     "newItems": [
       {
         "id": 111,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f5.png",
         "foodType": "Veg",
         "foodCategory": "Snacks",
         "slideCategoryTitle": "Paneer Tikka",
@@ -12,7 +12,7 @@
       },
       {
         "id": 112,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f1.png",
         "foodType": "Veg",
         "foodCategory": "Snacks",
         "slideCategoryTitle": "Spring Rolls",
@@ -22,7 +22,7 @@
       },
       {
         "id": 113,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f2.png",
         "foodType": "Non-Veg",
         "foodCategory": "Lunch",
         "slideCategoryTitle": "Grilled Chicken",
@@ -32,7 +32,7 @@
       },
       {
         "id": 114,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f3.png",
         "foodType": "Veg",
         "foodCategory": "Beverages",
         "slideCategoryTitle": "Mango Smoothie",
@@ -42,7 +42,7 @@
       },
       {
         "id": 115,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f4.png",
         "foodType": "Non-Veg",
         "foodCategory": "Dinner",
         "slideCategoryTitle": "Lamb Chops",
@@ -52,7 +52,7 @@
       },
       {
         "id": 116,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f5.png",
         "foodType": "Veg",
         "foodCategory": "Dinner",
         "slideCategoryTitle": "Vegetable Stir-fry",
@@ -62,7 +62,7 @@
       },
       {
         "id": 117,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f6.png",
         "foodType": "Non-Veg",
         "foodCategory": "Snacks",
         "slideCategoryTitle": "Chicken Wings",
@@ -72,7 +72,7 @@
       },
       {
         "id": 118,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f4.png",
         "foodType": "Non-Veg",
         "foodCategory": "Lunch",
         "slideCategoryTitle": "Fish Tacos",
@@ -82,7 +82,7 @@
       },
       {
         "id": 119,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f1.png",
         "foodType": "Veg",
         "foodCategory": "Breakfast",
         "slideCategoryTitle": "Avocado Toast",
@@ -92,7 +92,7 @@
       },
       {
         "id": 120,
-        "image": "assets/images/usedImages/img1.png",
+        "image": "assets/images/usedImages/f2.png",
         "foodType": "Non-Veg",
         "foodCategory": "Lunch",
         "slideCategoryTitle": "Shrimp Scampi",

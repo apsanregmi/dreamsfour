@@ -73,7 +73,7 @@ function Product1() {
                     }}
                   />
                 </div>
-                <div className="product-content" style={{ textAlign: "center", marginTop: "15px" }}>
+                <div className="product-content" style={{ textAlign: "left", marginTop: "15px" }}>
                   <h4>
                     {/* Pass the item ID via query params */}
                     <Link legacyBehavior href={{ pathname: "/menu1", query: { recommendedItemId: item.id } }}>

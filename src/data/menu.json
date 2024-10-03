@@ -7,42 +7,42 @@
       "foodCategory": "Breakfast",
       "slideCategoryTitle": "Nepali Thali",
       "slideTitle": "Dal-Bhaat-Tarakari",
-      "description": "Dal-Bhaat-Tarakari is the heart of every Nepali. This local comfort food.",
+      "description": "It has survived not only five centuries.",
       "price": "$80"
     },
     {
       "id": 2,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f1.png",
       "foodType": "Veg",
       "foodCategory": "Breakfast",
       "slideCategoryTitle": "Sweet Peppers",
       "slideTitle": "Delicious Sweet Peppers",
-      "description": "It has survived not only five centuries, but also the electronic.",
+      "description": "It has survived not only five centuries.",
       "price": "$80"
     },
     {
       "id": 3,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f2.png",
       "foodType": "Veg",
       "foodCategory": "Breakfast",
       "slideCategoryTitle": "Sweet Peppers",
       "slideTitle": "Tasty Sweet Peppers",
-      "description": "It has survived not only five centuries, but also the electronic.",
+      "description": "It has survived not only five centuries.",
       "price": "$40"
     },
     {
       "id": 4,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f3.png",
       "foodType": "Veg",
       "foodCategory": "Breakfast",
       "slideCategoryTitle": "Ricotta Cheese",
       "slideTitle": "Fresh Ricotta Cheese",
-      "description": "It has survived not only five centuries, but also the leap know.",
+      "description": "It has survived not only five centuries.",
       "price": "$60"
     },
     {
       "id": 5,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f4.png",
       "foodType": "Veg",
       "foodCategory": "Breakfast",
       "slideCategoryTitle": "Black Beans",
@@ -52,7 +52,7 @@
     },
     {
       "id": 6,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f5.png",
       "foodType": "Veg",
       "foodCategory": "Breakfast",
       "slideCategoryTitle": "Special Kabab",
@@ -62,12 +62,12 @@
     },
     {
       "id": 7,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f6.png",
       "foodType": "Veg",
       "foodCategory": "Dinner",
       "slideCategoryTitle": "Veggie Burgers",
       "slideTitle": "Hearty Veggie Burgers",
-      "description": "It has survived not only five centuries, the leap need.",
+      "description": "It has survived not only five centuries.",
       "price": "$80"
     },
     {
@@ -77,22 +77,22 @@
       "foodCategory": "Dinner",
       "slideCategoryTitle": "Sweet Peppers",
       "slideTitle": "Flavorful Sweet Peppers",
-      "description": "It has survived not only five centuries, but also the electronic.",
+      "description": "It has survived not only five centuries.",
       "price": "$40"
     },
     {
       "id": 9,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f1.png",
       "foodType": "Veg",
       "foodCategory": "Dinner",
       "slideCategoryTitle": "Ricotta Cheese",
       "slideTitle": "Rich Ricotta Cheese",
-      "description": "It has survived not only five centuries also the leap know.",
+      "description": "It has survived not only five centuries.",
       "price": "$60"
     },
     {
       "id": 10,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f2.png",
       "foodType": "Veg",
       "foodCategory": "Dinner",
       "slideCategoryTitle": "Black Beans",
@@ -102,7 +102,7 @@
     },
     {
       "id": 11,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f3.png",
       "foodType": "Veg",
       "foodCategory": "Dinner",
       "slideCategoryTitle": "Special Kabab",
@@ -112,32 +112,32 @@
     },
     {
       "id": 12,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f4.png",
       "foodType": "Veg",
       "foodCategory": "Beverages",
       "slideCategoryTitle": "Veggie Burgers",
       "slideTitle": "Classic Veggie Burgers",
-      "description": "It has survived not only five centuries the leap need.",
+      "description": "It has survived not only five centuries.",
       "price": "$80"
     },
     {
       "id": 13,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f5.png",
       "foodType": "Veg",
       "foodCategory": "Beverages",
       "slideCategoryTitle": "Sweet Peppers",
       "slideTitle": "Crispy Sweet Peppers",
-      "description": "It has survived not only five centuries, but also the electronic.",
+      "description": "It has survived not only five centuries.",
       "price": "$40"
     },
     {
       "id": 14,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f6.png",
       "foodType": "Veg",
       "foodCategory": "Beverages",
       "slideCategoryTitle": "Ricotta Cheese",
       "slideTitle": "Smooth Ricotta Cheese",
-      "description": "It has survived not only five centuries also the leap know.",
+      "description": "It has survived not only five centuries.",
       "price": "$60"
     },
     {
@@ -152,93 +152,13 @@
     },
     {
       "id": 16,
-      "image": "assets/images/usedImages/img1.png",
+      "image": "assets/images/usedImages/f1.png",
       "foodType": "Veg",
       "foodCategory": "Beverages",
       "slideCategoryTitle": "Special Kabab",
       "slideTitle": "Grilled Special Kabab",
       "description": "It has survived not only five centuries.",
       "price": "$40"
-    },
-    {
-      "id": 17,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Beverages",
-      "slideCategoryTitle": "Chicken Thali",
-      "slideTitle": "Chicken with Dal-Bhaat",
-      "description": "A Nepali favorite, chicken served with traditional Dal-Bhaat.",
-      "price": "$90"
-    },
-    {
-      "id": 18,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Breakfast",
-      "slideCategoryTitle": "Omelette",
-      "slideTitle": "Cheese Omelette",
-      "description": "A fluffy omelette made with farm-fresh eggs and cheese.",
-      "price": "$50"
-    },
-    {
-      "id": 19,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Lunch",
-      "slideCategoryTitle": "Chicken Curry",
-      "slideTitle": "Spicy Chicken Curry",
-      "description": "A flavorful chicken curry made with a blend of spices.",
-      "price": "$100"
-    },
-    {
-      "id": 20,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Lunch",
-      "slideCategoryTitle": "Fish Curry",
-      "slideTitle": "Grilled Fish Curry",
-      "description": "Delicious grilled fish in a tangy curry sauce.",
-      "price": "$110"
-    },
-    {
-      "id": 21,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Dinner",
-      "slideCategoryTitle": "Beef Steak",
-      "slideTitle": "Juicy Beef Steak",
-      "description": "A perfectly grilled beef steak served with sides.",
-      "price": "$120"
-    },
-    {
-      "id": 22,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Dinner",
-      "slideCategoryTitle": "Pork Ribs",
-      "slideTitle": "Barbecue Pork Ribs",
-      "description": "Slow-cooked pork ribs in a tangy barbecue sauce.",
-      "price": "$130"
-    },
-    {
-      "id": 23,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Beverages",
-      "slideCategoryTitle": "Chicken Wings",
-      "slideTitle": "Spicy Chicken Wings",
-      "description": "Crispy chicken wings with a spicy sauce.",
-      "price": "$70"
-    },
-    {
-      "id": 24,
-      "image": "assets/images/usedImages/img2.png",
-      "foodType": "Non-Veg",
-      "foodCategory": "Beverages",
-      "slideCategoryTitle": "Shrimp Cocktail",
-      "slideTitle": "Fresh Shrimp Cocktail",
-      "description": "Chilled shrimp served with a tangy cocktail sauce.",
-      "price": "$80"
     }
   ]
 }

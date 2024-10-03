@@ -82,7 +82,7 @@ function Header() {
           <div className="header-logo">
             <Link href="/" legacyBehavior>
               <a>
-                <img alt="image" className="img-fluid" src="assets/images/header2-logo.svg" />
+                <img alt="image" className="img-fluid" src="assets/images/logo/Asset2.svg" />
               </a>
             </Link>
           </div>
@@ -123,8 +123,8 @@ function Header() {
                 </Link>
               </li>
               
-              <li className="bg-gray-500 text-white">
-                <Link href="/menu1" legacyBehavior>
+              <li className=" text-white reservation-btn bg-yellow-500  my-2">
+                <Link href="/menu1" legacyBehavior >
                   <a className={currentRoute === "/menu" ? "active" : ""}>Menu</a>
                 </Link>
               </li>
