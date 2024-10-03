@@ -1,30 +1,36 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import menuList2Data from "../../data/foodMenuList2.json";
+import menuList2Data from "../../data/menu.json"; 
+
 function MenuList2() {
   const [showMore, setShowMore] = useState(6);
+
   const handleShowmore = () => {
     setShowMore(showMore + showMore);
   };
+
   return (
     <div className="home2-food-items mb-120">
       <div className="container">
         <div className="row d-flex align-items-center justify-content-center mb-40 g-3">
           <div className="col-lg-8">
             <div className="section-title">
-              <span>
+              <div className="flex space-x-2">
                 <img
                   className="left-vec"
                   src="assets/images/icon/sub-title-vec.svg"
                   alt="sub-title-vec"
-                />
+                /><div className="text-yellow-500 text-2xl">
                 Menu List
+
+
+                </div>
                 <img
                   className="right-vec"
                   src="assets/images/icon/sub-title-vec.svg"
                   alt="sub-title-vec"
                 />
-              </span>
+              </div>
               <h2>Find Your Food Item</h2>
             </div>
           </div>
@@ -33,7 +39,7 @@ function MenuList2() {
               className="primary-btn5 btn-md2"
               onClick={() => handleShowmore()}
               style={
-                menuList2Data.length > showMore
+                menuList2Data.menu.length > showMore
                   ? { color: "#000", cursor: "pointer" }
                   : {
                       color: "#000",
@@ -42,16 +48,25 @@ function MenuList2() {
                       opacity: ".5",
                     }
               }
-              disabled={menuList2Data.length > showMore ? false : true}
+              disabled={menuList2Data.menu.length > showMore ? false : true}
             >
               <i className="bi bi-arrow-up-right-circle" />
-              {menuList2Data.length > showMore ? "View More" : "Complete"}
+              {menuList2Data.menu.length > showMore ? "View More" : "Complete"}
             </div>
           </div>
         </div>
         <div className="row g-4">
-          {menuList2Data.slice(0, showMore).map((value) => {
-            const { id, image, price, title, discription, category } = value;
+          {menuList2Data.menu.slice(0, showMore).map((value) => {
+            const {
+              id,
+              image,
+              price,
+              slideTitle,
+              description,
+              foodCategory,
+              foodType,
+            } = value;
+
             return (
               <div key={id} className="col-lg-4 col-md-6 col-sm-6">
                 <div className="food-items2-wrap">
@@ -59,20 +74,21 @@ function MenuList2() {
                     <img
                       className="img-fluid"
                       src={image}
-                      alt="h2-food-item-1"
+                      alt={slideTitle}
                     />
                     <div className="batch">
-                      <a>Lanch</a>
+                      <a>{foodCategory}</a>
                     </div>
                     <div className="pric-tag">
-                      <span>${price}</span>
+                      <span>{price}</span>
                     </div>
                   </div>
                   <div className="food-content">
                     <h3>
-                      <Link href="/shop-details">{title}</Link>
+                      <Link href="/shop-details">{slideTitle}</Link>
                     </h3>
-                    <p>{discription}</p>
+                    <p>{description}</p>
+                    <span className="food-type">{foodType}</span> {/* Displaying the food type */}
                   </div>
                 </div>
               </div>
