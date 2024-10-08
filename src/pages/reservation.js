@@ -2,14 +2,19 @@ import React from "react";
 import ReservationForm from "../components/category/ReservationForm";
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
+import Reservation2 from "../components/reservation/Reservation2";
 
 function reservation() {
   return (
     <Layout>
       <Breadcrumb pageName="Reservation" pageTitle="Reservation" />
       <div>
+        <div className="container mt-20">
         {/* ========== Reservation end============= */}
-        <ReservationForm />
+        {/* <ReservationForm /> */}
+      <Reservation2 />
+      </div>
+
         {/* ========== Reservation end============= */}
         <div className="best-offer-area1 mb-120">
           <div className="container">
@@ -17,6 +22,7 @@ function reservation() {
               <div className="col-lg-8">
                 <div className="section-title text-center">
                   <span>
+                    <div className="flex">
                     <img
                       className="left-vec"
                       src="assets/images/icon/sub-title-vec.svg"
@@ -28,6 +34,7 @@ function reservation() {
                       src="assets/images/icon/sub-title-vec.svg"
                       alt="sub-title-vec"
                     />
+                    </div>
                   </span>
                   <h2>Choose Your Best Offer</h2>
                 </div>
@@ -39,7 +46,7 @@ function reservation() {
                   <div className="best-offer-img">
                     <img
                       className="img-fluid"
-                      src="assets/images/bg/best-offer-img1.png"
+                      src="https://restho-nextjs.vercel.app/assets/images/bg/best-offer-img1.png"
                       alt="best-offer-img1"
                     />
                     <div className="price-tag">
@@ -64,7 +71,7 @@ function reservation() {
                   <div className="best-offer-img">
                     <img
                       className="img-fluid"
-                      src="assets/images/bg/best-offer-img2.png"
+                      src="https://restho-nextjs.vercel.app/assets/images/bg/best-offer-img2.png"
                       alt="best-offer-img1"
                     />
                     <div className="price-tag">

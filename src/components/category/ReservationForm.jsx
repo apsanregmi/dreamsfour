@@ -53,6 +53,8 @@ function ReservationForm() {
           <div className="col-lg-8">
             <div className="section-title text-center">
               <span>
+                <div className="flex"> 
+
                 <img
                   className="left-vec"
                   src="assets/images/icon/sub-title-vec.svg"
@@ -64,6 +66,8 @@ function ReservationForm() {
                   src="assets/images/icon/sub-title-vec.svg"
                   alt="sub-title-vec"
                 />
+                </div>
+
               </span>
               <h2>For Online Reservation</h2>
             </div>
