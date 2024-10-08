@@ -6238,7 +6238,7 @@ footer .footer-btm .privacy-policy p a:hover {
    11. Home2 Reservation
 =======================================*/
 .h2-reservarion-area {
-  background-image: linear-gradient(rgba(9, 22, 29, 0.75), rgba(9, 22, 29, 0.75)), url(../images/bg/bg-2.png);
+  background-image: linear-gradient(rgba(9, 22, 29, 0.75), rgba(9, 22, 29, 0.1)), url(../images/bg/bg-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
