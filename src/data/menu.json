@@ -159,6 +159,36 @@
       "slideTitle": "Grilled Special Kabab",
       "description": "It has survived not only five centuries.",
       "price": "$40"
+    },
+    {
+      "id": 17,
+      "image": "assets/images/usedImages/f2.png",
+      "foodType": "Veg",
+      "foodCategory": "Lunch",
+      "slideCategoryTitle": "Ricotta Cheese",
+      "slideTitle": "Rich Ricotta Cheese",
+      "description": "It has survived not only five centuries.",
+      "price": "$60"
+    },
+    {
+      "id": 18,
+      "image": "assets/images/usedImages/f1.png",
+      "foodType": "Non-Veg",
+      "foodCategory": "Lunch",
+      "slideCategoryTitle": "Ricotta Cheese",
+      "slideTitle": "Rich Ricotta Cheese",
+      "description": "It has survived not only five centuries.",
+      "price": "$60"
+    },
+    {
+      "id": 19,
+      "image": "assets/images/usedImages/f1.png",
+      "foodType": "Non-Veg",
+      "foodCategory": "Dinner",
+      "slideCategoryTitle": "Ricotta Cheese",
+      "slideTitle": "Rich Ricotta Cheese",
+      "description": "It has survived not only five centuries.",
+      "price": "$60"
     }
   ]
 }

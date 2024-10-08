@@ -2,8 +2,8 @@ import React from 'react';
 
 const FilterControls = ({ categories, selectedCategory, setSelectedCategory, vegMode, setVegMode }) => {
   return (
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex space-x-4">
+    <div className="flex flex-wrap justify-between items-center mb-6">
+      <div className="flex flex-wrap space-x-4">
         {categories.map((category) => (
           <button
             key={category}
@@ -14,7 +14,7 @@ const FilterControls = ({ categories, selectedCategory, setSelectedCategory, veg
                 : 'border-transparent text-gray-500'
             }`}
           >
-            {category}
+            {category} 
           </button>
         ))}
       </div>
