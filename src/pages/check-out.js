@@ -138,7 +138,8 @@ const Checkout = () => {
   };
 
   // This will check if both delivery and payment method match the criteria
-  const isPlaceOrderEnabled = deliveryMethod === "pickup" && paymentMethod === "cashonpickup";
+  // const isPlaceOrderEnabled = deliveryMethod === "pickup" && paymentMethod === "cash-on-pickup";
+  const isPlaceOrderEnabled =false;
 
   return (
     <Layout>
