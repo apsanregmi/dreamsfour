@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CloverPaymentPopup from './CloverPaymentPopup';
 
-const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodChange, handlePaymentMethodChange, paymentMethod, errors }) => {
+const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodChange, handlePaymentMethodChange, paymentMethod = 'cash-on-pickup', errors }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(false);
 
@@ -10,6 +10,8 @@ const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodC
     handlePaymentMethodChange(event);
     if (event.target.value === 'clover') {
       setIsPopupOpen(true); // Open the payment popup when "Clover" is selected
+    } else {
+      setIsPopupOpen(false); // Close the popup if "Clover" is not selected
     }
   };
 
@@ -30,13 +32,33 @@ const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodC
         ))}
       </div>
 
-      {/* Delivery or Pickup Option */}
+      {/* Delivery or Pickup Option - Radio Buttons */}
       <div className="mt-6">
         <label className="block mb-2 text-sm font-medium text-gray-700">Choose Delivery Method</label>
-        <select value={deliveryMethod} onChange={handleDeliveryMethodChange} className="w-full p-2 border border-gray-300 rounded-lg">
-          <option value="pickup">Pickup</option>
-          <option value="delivery">Delivery</option>
-        </select>
+        <div className="flex flex-col">
+          <label className="inline-flex items-center">
+            <input
+              type="radio"
+              name="deliveryMethod"
+              value="pickup"
+              checked={deliveryMethod === 'pickup'}
+              onChange={handleDeliveryMethodChange}
+              className="mr-2"
+            />
+            Pickup
+          </label>
+          <label className="inline-flex items-center">
+            <input
+              type="radio"
+              name="deliveryMethod"
+              value="delivery"
+              checked={deliveryMethod === 'delivery'}
+              onChange={handleDeliveryMethodChange}
+              className="mr-2"
+            />
+            Delivery
+          </label>
+        </div>
         {deliveryMethod === 'delivery' && (
           <div className="mt-4 p-4 bg-yellow-100 text-yellow-800 border border-yellow-500 rounded-lg">
             Delivery is not available at the moment.
@@ -51,14 +73,33 @@ const OrderSummary2 = ({ cartItems, total, deliveryMethod, handleDeliveryMethodC
           <span className="font-medium">Rs {total.toFixed(2)}</span>
         </div>
 
-        {/* Payment Method */}
+        {/* Payment Method - Radio Buttons */}
         <div className="mt-4">
           <label className="block mb-2 text-sm font-medium text-gray-700">Select Payment Method</label>
-          <select value={paymentMethod} onChange={handlePaymentSelect} className="w-full p-2 border border-gray-300 rounded-lg">
-            <option value="">Select Method</option>
-            <option value="clover">Clover</option>
-            <option value="cash-on-pickup">Cash on pick up</option>
-          </select>
+          <div className="flex flex-col">
+            <label className="inline-flex items-center">
+              <input
+                type="radio"
+                name="paymentMethod"
+                value="clover"
+                checked={paymentMethod === 'clover'}
+                onChange={handlePaymentSelect}
+                className="mr-2"
+              />
+              Clover
+            </label>
+            <label className="inline-flex items-center">
+              <input
+                type="radio"
+                name="paymentMethod"
+                value="cash-on-pickup"
+                checked={paymentMethod === 'cash-on-pickup'}
+                onChange={handlePaymentSelect}
+                className="mr-2"
+              />
+              Cash on pick up
+            </label>
+          </div>
           {errors.paymentMethod && <span className="text-red-500 text-sm mt-2">{errors.paymentMethod}</span>}
         </div>
       </div>

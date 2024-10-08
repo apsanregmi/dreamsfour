@@ -3,7 +3,7 @@ import React from "react";
 const ShippingDetails = ({ shippingDetails, handleShippingChange }) => {
   return (
     <div>
-      <h2 className="text-2xl font-semibold mb-6">Ship to a Different Address?</h2>
+      {/* <h2 className="text-2xl font-semibold mb-6">Ship to a Different Address?</h2> */}
       <form>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="form-group">

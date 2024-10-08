@@ -69,7 +69,6 @@ const Checkout = () => {
       ...prevDetails,
       [name]: value,
     }));
-    setUseShipping(true);
   };
 
   const handlePaymentMethodChange = (e) => {
@@ -118,10 +117,10 @@ const Checkout = () => {
         paymentMethod,
         deliveryMethod,
       };
-  
+
       // Prepare the email data using the utility function
       const formattedEmailData = prepareEmailData(orderDetails);
-  
+
       emailjs
         .send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID_MENU, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_MENU, formattedEmailData, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID_MENU)
         .then(
@@ -137,6 +136,10 @@ const Checkout = () => {
       console.log("Fix validation errors before submitting");
     }
   };
+
+  // This will check if both delivery and payment method match the criteria
+  const isPlaceOrderEnabled = deliveryMethod === "pickup" && paymentMethod === "cashonpickup";
+
   return (
     <Layout>
       <Breadcrumb pageName="Checkout" pageTitle="Checkout" />
@@ -148,11 +151,26 @@ const Checkout = () => {
               handleBillingChange={handleBillingChange}
               errors={errors}
             />
-            <ShippingDetails
-              shippingDetails={shippingDetails}
-              handleShippingChange={handleShippingChange}
-            />
+
+            {/* Checkbox for Shipping to a Different Address */}
+            <label className="block mb-4">
+              <input
+                type="checkbox"
+                checked={useShipping}
+                onChange={() => setUseShipping(!useShipping)}
+              />
+              <span className="ml-2">Do you want to ship to a different address?</span>
+            </label>
+
+            {/* Conditionally render ShippingDetails component */}
+            {useShipping && (
+              <ShippingDetails
+                shippingDetails={shippingDetails}
+                handleShippingChange={handleShippingChange}
+              />
+            )}
           </div>
+
           <div>
             <OrderSummary2
               cartItems={cartItems}
@@ -164,7 +182,12 @@ const Checkout = () => {
               paymentMethod={paymentMethod}
               errors={errors}
             />
-            <PlaceOrderButton handlePlaceOrder={handlePlaceOrder} />
+
+            {/* Disable Place Order Button if conditions are not met */}
+            <PlaceOrderButton
+              handlePlaceOrder={handlePlaceOrder}
+              disabled={!isPlaceOrderEnabled}
+            />
           </div>
         </div>
       </div>
