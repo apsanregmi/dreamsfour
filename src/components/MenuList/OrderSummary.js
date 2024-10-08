@@ -30,7 +30,7 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
   
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg sticky top-28">
       <h2 className="text-xl font-semibold mb-4">Current Order</h2>
 
       {/* If no items in the cart */}

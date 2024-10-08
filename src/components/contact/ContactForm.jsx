@@ -56,6 +56,8 @@ const ContactForm = () => {
           <div className="col-lg-8">
             <div className="section-title text-center">
               <span>
+                <div className='flex'>
+
                 <img
                   className="left-vec"
                   src="assets/images/icon/sub-title-vec.svg"
@@ -67,6 +69,8 @@ const ContactForm = () => {
                   src="assets/images/icon/sub-title-vec.svg"
                   alt="sub-title-vec"
                 />
+                </div>
+
               </span>
               <h2>Get In Touch</h2>
             </div>

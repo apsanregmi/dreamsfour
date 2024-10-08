@@ -82,7 +82,7 @@ function Menu1() {
         </div>
 
         {/* Right Side: Order Summary */}
-        <div className="w-full lg:w-1/3 bg-white shadow-lg rounded-lg p-6">
+        <div className="w-full lg:w-1/3 bg-white  rounded-lg p-6 ">
           <OrderSummary
             cartItems={cartItems}
             addToCart={addToCart}
