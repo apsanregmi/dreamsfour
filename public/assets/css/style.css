@@ -11118,7 +11118,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 
 .contact-form {
-  background-image: url(../images/bg/reservation-1-bg.png);
+  background-image: url(../images/usedImages/overlay.png);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11141,7 +11141,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .contact-form::after {
   content: "";
-  background: linear-gradient(98.3deg, rgba(111, 73, 2, 0.2) 0.45%, rgba(0, 0, 0, 0) 162.03%), linear-gradient(269.66deg, rgba(0, 2, 3, 0.51) 0.28%, #09161D 99.7%);
+  background: linear-gradient(98.3deg, rgba(111, 73, 2, 0.1) 0.45%, rgba(0, 0, 0, 0) 162.03%), linear-gradient(269.66deg, rgba(0, 2, 3, 0.51) 0.28%, #09161D 99.7%);
   position: absolute;
   left: 0;
   top: 0;

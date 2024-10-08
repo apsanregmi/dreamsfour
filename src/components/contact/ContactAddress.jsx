@@ -9,7 +9,7 @@ function ContactAddress() {
             <div className="contact-wrap">
               <div className="contact-img">
                 <img
-                  src="assets/images/bg/contact-img-01.png"
+                  src="https://restho-nextjs.vercel.app/assets/images/bg/contact-img-01.png"
                   alt="contact-img-01"
                 />
               </div>
@@ -51,7 +51,7 @@ function ContactAddress() {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+          {/* <div className="col-xxl-6 col-xl-4 col-lg-5 col-md-6 col-sm-8">
             <div className="contact-wrap">
               <div className="contact-img">
                 <img
@@ -96,7 +96,7 @@ function ContactAddress() {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
