@@ -39,7 +39,7 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
       ) : (
         <div>
           {/* Scrollable Cart Items Section */}
-          <div className="max-h-80 overflow-y-auto">
+          <div className="max-h-56 overflow-y-auto">
             {/* Display each cart item */}
             {cartItems.map((item, index) => (
               <div
