@@ -74,7 +74,7 @@ function Footer() {
               <div className="footer-widgetfooter-widget social-area">
                 <div className="footer-logo text-center">
                   <Link legacyBehavior href="/">
-                    <img src="assets/images/logo/Asset2.svg" alt="" />
+                    <img src="assets/images/logo/Asset1.svg" alt="" />
                   </Link>
                   <p>Established . 2022</p>
                   <span>

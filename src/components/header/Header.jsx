@@ -79,10 +79,10 @@ function Header() {
         className={state.scrollY > 10 ? "header-area style-2 sticky" : "header-area style-2"}
       >
         <div className="container-fluid d-flex justify-content-between align-items-center">
-          <div className="header-logo">
+          <div className="header-logo ">
             <Link href="/" legacyBehavior>
               <a>
-                <img alt="image" className="img-fluid" src="assets/images/logo/Asset2.svg" />
+                <img alt="image" className="img-fluid pl-6" src="assets/images/logo/Asset2.svg" />
               </a>
             </Link>
           </div>
