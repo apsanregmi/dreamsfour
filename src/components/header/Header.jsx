@@ -78,11 +78,11 @@ function Header() {
         ref={headerRef}
         className={state.scrollY > 10 ? "header-area style-2 sticky" : "header-area style-2"}
       >
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+        <div className="container d-flex justify-content-between align-items-center ml-4 ">
           <div className="header-logo ">
             <Link href="/" legacyBehavior>
               <a>
-                <img alt="image" className="img-fluid pl-6" src="assets/images/logo/Asset2.svg" />
+                <img alt="image" className="img-fluid ml-4" src="assets/images/logo/Asset2.svg" />
               </a>
             </Link>
           </div>
@@ -123,7 +123,8 @@ function Header() {
                 </Link>
               </li>
               
-              <li className=" text-white reservation-btn bg-yellow-500  my-2">
+              <li className=" text-white reservation-btn bg-yellow-500 rounded-full my-2">
+                
                 <Link href="/menu1" legacyBehavior >
                   <a className={currentRoute === "/menu" ? "active" : ""}>Menu</a>
                 </Link>
