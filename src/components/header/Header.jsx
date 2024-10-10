@@ -76,19 +76,31 @@ function Header() {
 
       <header
         ref={headerRef}
-        className={state.scrollY > 10 ? "header-area style-2 sticky" : "header-area style-2"}
+        className={
+          state.scrollY > 10
+            ? "header-area style-2 sticky"
+            : "header-area style-2"
+        }
       >
-        <div className="container d-flex justify-content-between align-items-center ml-4 ">
+        <div className="container d-flex justify-content-between align-items-center ml-4 h-12 ">
           <div className="header-logo ">
             <Link href="/" legacyBehavior>
               <a>
-                <img alt="image" className="img-fluid ml-4" src="assets/images/logo/Asset2.svg" />
+                <img
+                  alt="image"
+                  className="img-fluid ml-4 w-48 h-12 p-2"
+                  src="assets/images/logo/Asset2.svg"
+                />
               </a>
             </Link>
           </div>
 
-          <div className={state.mobileMenuState ? "main-menu show-menu" : "main-menu"}>
-            <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
+          <div
+            className={
+              state.mobileMenuState ? "main-menu show-menu" : "main-menu"
+            }
+          >
+            <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center w-10">
               <div className="mobile-logo-wrap">
                 <Link href="/" legacyBehavior>
                   <a>
@@ -98,7 +110,9 @@ function Header() {
               </div>
               <div
                 className="menu-close-btn"
-                onClick={() => dispatch({ type: "toggleMobileMenu", payload: false })}
+                onClick={() =>
+                  dispatch({ type: "toggleMobileMenu", payload: false })
+                }
               >
                 <i className="bi bi-x-lg text-white" />
               </div>
@@ -107,35 +121,55 @@ function Header() {
             <ul className="menu-list">
               <li>
                 <Link href="/catering-and-events" legacyBehavior>
-                  <a className={currentRoute === "/catering-and-events" ? "active" : ""}>
+                  <a
+                    className={
+                      currentRoute === "/catering-and-events" ? "active" : ""
+                    }
+                  >
                     Catering And Events
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/reservation" legacyBehavior>
-                  <a className={currentRoute === "/reservation" ? "active" : ""}>Reservation</a>
+                  <a
+                    className={currentRoute === "/reservation" ? "active" : ""}
+                  >
+                    Reservation
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/contact" legacyBehavior>
-                  <a className={currentRoute === "/contact" ? "active" : ""}>Contact</a>
-                </Link>
-              </li>
-              
-              <li className=" text-white reservation-btn bg-yellow-500 rounded-full my-2">
-                
-                <Link href="/menu1" legacyBehavior >
-                  <a className={currentRoute === "/menu" ? "active" : ""}>Menu</a>
+                  <a className={currentRoute === "/contact" ? "active" : ""}>
+                    Contact
+                  </a>
                 </Link>
               </li>
 
+              <li className="h-full flex items-center">
+  <Link href="/menu1" legacyBehavior>
+    <a
+      className={`bg-yellow-500 text-white px-4 py-2 rounded-md ${
+        currentRoute === "/menu1" ? "active" : ""
+      } flex items-center justify-center`}
+      style={{ height: '100%' }}
+    >
+      Menu
+    </a>
+  </Link>
+</li>
             </ul>
           </div>
 
           <div
             className="mobile-menu-toggle d-lg-none"
-            onClick={() => dispatch({ type: "toggleMobileMenu", payload: !state.mobileMenuState })}
+            onClick={() =>
+              dispatch({
+                type: "toggleMobileMenu",
+                payload: !state.mobileMenuState,
+              })
+            }
           >
             <i className="bi bi-list" />
           </div>

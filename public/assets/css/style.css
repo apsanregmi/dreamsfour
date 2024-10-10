@@ -2018,6 +2018,7 @@ header.style-1 .main-menu ul li.menu-item-has-children > i {
   }
   header.style-1 .main-menu ul li ul.sub-menu > li a.active {
     color: var(--primary-color1);
+
   }
   header.style-1 .main-menu ul li ul.sub-menu > li i {
     color: var(--text-primary);
@@ -2293,6 +2294,7 @@ header.style-2 .main-menu ul > li a.active {
   color: var(--primary-color1);
   display: inline-block;
   position: relative;
+
 }
 header.style-2 .main-menu ul > li i {
   font-size: 20px;
@@ -2369,6 +2371,7 @@ header.style-2 .main-menu ul > li ul.sub-menu > li a:hover {
 }
 header.style-2 .main-menu ul > li ul.sub-menu > li a.active {
   color: var(--primary-color1);
+  
 }
 header.style-2 .main-menu ul > li ul.sub-menu > li .sub-menu {
   left: 215px;
@@ -2504,6 +2507,7 @@ header.style-2 .main-menu ul li.menu-item-has-children > i {
   }
   header.style-2 .main-menu ul li ul.sub-menu > li a.active {
     color: var(--primary-color1);
+    
   }
   header.style-2 .main-menu ul li ul.sub-menu > li i {
     color: var(--text-primary);
@@ -2786,6 +2790,7 @@ header.style-3 .main-menu ul > li a.active {
   color: var(--primary-color1);
   display: inline-block;
   position: relative;
+  
 }
 header.style-3 .main-menu ul > li i {
   font-size: 20px;
@@ -2857,6 +2862,7 @@ header.style-3 .main-menu ul > li ul.sub-menu > li a:hover {
 }
 header.style-3 .main-menu ul > li ul.sub-menu > li a.active {
   color: var(--primary-color1);
+  
 }
 header.style-3 .main-menu ul > li ul.sub-menu > li .sub-menu {
   left: 215px;
@@ -2996,6 +3002,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   }
   header.style-3 .main-menu ul li ul.sub-menu > li a.active {
     color: var(--primary-color1);
+    
   }
   header.style-3 .main-menu ul li ul.sub-menu > li i {
     color: var(--text-primary);
