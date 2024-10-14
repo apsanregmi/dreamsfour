@@ -17,7 +17,7 @@ function Breadcrumb({ pageTitle, pageName }) {
         />
       </div>
       <div className="container">
-        <div className="row d-flex justify-content-center align-items-center">
+        <div className="row d-flex justify-content-center align-items-center ">
           <div className="col-lg-12">
             <h2 className="breadcrumb-title">{pageTitle}</h2>
             <nav aria-label="breadcrumb">
