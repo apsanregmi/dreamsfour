@@ -103,7 +103,7 @@ function Menu1() {
 
       {/* Mobile Floating Cart Button */}
       <button
-        className="fixed bottom-5 right-5 bg-yellow-500 text-white p-4 rounded-full shadow-lg lg:hidden"
+        className="fixed bottom-5 right-5 bg-yellow-500 text-white p-4 rounded-full shadow-lg lg:hidden z-50"
         onClick={toggleOrderSummary}
       >
         <span className="material-icons">🛒</span>
