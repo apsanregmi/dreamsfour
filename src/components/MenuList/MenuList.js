@@ -16,7 +16,7 @@ const MenuList = ({ items, addToCart }) => {
   const groupedItems = groupByCategory(items); // Group items by foodCategory
 
   return (
-    <div className="menu-list p-6 max-w-4xl mx-auto">
+    <div className="menu-list md:p-6 p-1 max-w-4xl mx-auto">
       {/* Dynamically rendering each category */}
       {Object.keys(groupedItems).map((category) => (
         <div key={category} className="mb-12">

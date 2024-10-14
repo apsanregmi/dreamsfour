@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
+const OrderSummary = ({ cartItems, addToCart, removeFromCart, toggleOrderSummary }) => {
   const router = useRouter();
 
   // Calculate subtotal, tax, and total amount
@@ -27,10 +27,19 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
       },
     });
   };
-  
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg sticky top-28">
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg sticky top-28 ">
+      {/* Conditional Close Button for mobile */}
+      {toggleOrderSummary && (
+        <button
+          className="absolute top-2 right-2 text-gray-600 lg:hidden"
+          onClick={toggleOrderSummary}
+        >
+          ✕
+        </button>
+      )}
+
       <h2 className="text-xl font-semibold mb-4">Current Order</h2>
 
       {/* If no items in the cart */}
@@ -40,7 +49,6 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
         <div>
           {/* Scrollable Cart Items Section */}
           <div className="max-h-56 overflow-y-auto">
-            {/* Display each cart item */}
             {cartItems.map((item, index) => (
               <div
                 key={index}
@@ -62,14 +70,14 @@ const OrderSummary = ({ cartItems, addToCart, removeFromCart }) => {
                 <div className="flex items-center">
                   <button
                     onClick={() => removeFromCart(item)}
-                    className="text-black border border-yellow-500  hover:bg-yellow-400 hover:text-black font-bold py-1 px-3 rounded-full"
+                    className="text-black border border-yellow-500 hover:bg-yellow-400 hover:text-black font-bold py-1 px-3 rounded-full"
                   >
-                  -
+                    -
                   </button>
                   <span className="mx-2 text-yellow-600">{item.quantity}</span>
                   <button
                     onClick={() => addToCart(item)}
-                    className="text-white bg-yellow-500 hover:bg-yellow-700 font-bold py-1 px-3 rounded-full "
+                    className="text-white bg-yellow-500 hover:bg-yellow-700 font-bold py-1 px-3 rounded-full"
                   >
                     +
                   </button>

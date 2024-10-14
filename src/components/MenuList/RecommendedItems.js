@@ -31,7 +31,7 @@ const RecommendedItem = ({ addToCart }) => {
   }
 
   return (
-    <div className="border border-gray-200 rounded-lg p-6 flex items-center justify-between mb-6 relative shadow-lg">
+    <div className="border border-gray-200 rounded-lg md:p-6 p-1 flex items-center justify-between mb-6 relative shadow-lg">
       <div className="flex items-center">
         <img
           src={recommendedItem.image}

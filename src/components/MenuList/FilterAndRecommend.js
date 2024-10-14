@@ -16,7 +16,7 @@ const FilterAndRecommend = ({ addToCart }) => {
   });
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
+    <div className="p-1  sm:p-6  bg-white rounded-lg shadow-md">
       <FilterControls
         categories={['ALL', 'Breakfast', 'Lunch', 'Dinner']}
         selectedCategory={selectedCategory}

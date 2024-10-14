@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Layout from "../layout/Layout";
-import FilterAndRecommend from "../components/MenuList/FilterAndRecommend";
-import menuData from "../data/menu.json";
-import OrderSummary from "../components/MenuList/OrderSummary";
-import Home3Testimonial from "../components/testimonial/Home3Testimonial";
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Layout from '../layout/Layout';
+import FilterAndRecommend from '../components/MenuList/FilterAndRecommend';
+import menuData from '../data/menu.json';
+import OrderSummary from '../components/MenuList/OrderSummary';
+import Home3Testimonial from '../components/testimonial/Home3Testimonial';
 
 function Menu1() {
   const router = useRouter();
   const { recommendedItemId } = router.query;
   const [recommendedItem, setRecommendedItem] = useState(null);
   const [cartItems, setCartItems] = useState([]);
-  const [isOrderSummaryOpen, setIsOrderSummaryOpen] = useState(false); // New state for toggling OrderSummary
+  const [isOrderSummaryOpen, setIsOrderSummaryOpen] = useState(false);
 
   // Fetch the recommended item based on the query parameter
   useEffect(() => {
@@ -106,34 +106,26 @@ function Menu1() {
         className="fixed bottom-5 right-5 bg-yellow-500 text-white p-4 rounded-full shadow-lg lg:hidden"
         onClick={toggleOrderSummary}
       >
-        <span className="material-icons">Cart Items 🛒</span>
+        <span className="material-icons">🛒</span>
         <span className="ml-2">{cartItems.length}</span>
       </button>
 
       {/* Mobile Order Summary Modal */}
       {isOrderSummaryOpen && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50 lg:hidden">
-          <div className="bg-white w-11/12 mt-40 max-h-[70vh] p-6 rounded-lg relative overflow-y-auto">
-            {/* Close Button */}
-            <button
-              className="absolute top-2 right-2 text-gray-600"
-              onClick={toggleOrderSummary}
-            >
-              ✕
-            </button>
-
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center lg:hidden">
+          <div className="bg-white p-0 sm:p-6 rounded-lg w-11/12 max-w-md relative">
             <OrderSummary
               cartItems={cartItems}
               addToCart={addToCart}
               removeFromCart={removeFromCart}
+              toggleOrderSummary={toggleOrderSummary}
             />
           </div>
         </div>
       )}
 
-      <div className="mt-10">
-        <Home3Testimonial />
-      </div>
+      {/* Testimonials Section */}
+      <Home3Testimonial />
     </Layout>
   );
 }

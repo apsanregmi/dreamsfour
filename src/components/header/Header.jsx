@@ -82,13 +82,13 @@ function Header() {
             : "header-area style-2"
         }
       >
-        <div className="container d-flex justify-content-between align-items-center h-12 ml-2 md:ml-4 md:h-14 ">
-          <div className="header-logo ">
+        <div className="container d-flex justify-content-between align-items-center h-12 ml-1 sm:ml-4 md:ml-4 sm:h-20">
+          <div className="header-logo p-4">
             <Link href="/" legacyBehavior>
               <a>
                 <img
                   alt="image"
-                  className="img-fluid  h-12 md:ml-4 w-48 md:h-14 md:p-2"
+                  className="img-fluid  h-10 md:ml-4 w-48 sm:h-16 md:p-2"
                   src="assets/images/logo/Asset2.svg"
                 />
               </a>
