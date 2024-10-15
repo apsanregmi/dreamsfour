@@ -12,8 +12,8 @@ function Reservation2() {
           alt=""
         /> */}
       </div>
-      <div className="container">
-        <div className="row d-flex align-items-center justify-content-center mb-40">
+      <div className="w-full">
+        <div className="row d-flex align-items-center justify-content-center mb-40 pt-40">
           <div className="col-lg-8">
             <div className="section-title text-center">
               <span>
@@ -36,7 +36,7 @@ function Reservation2() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-10">
+          <div className="col-lg-10 -mt-6">
             <form>
               <div className="row justify-content-center">
                 <div className="col-lg-6 col-md-6 mb-25">

@@ -3,20 +3,24 @@ import ReservationForm from "../components/category/ReservationForm";
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
 import Reservation2 from "../components/reservation/Reservation2";
+import MenuList2 from "../components/MenuList/MenuList2";
+import NewItem2 from "../components/tems/NewItem2";
+
+
 
 function reservation() {
   return (
     <Layout>
-      <Breadcrumb pageName="Reservation" pageTitle="Reservation" />
+      {/* <Breadcrumb pageName="Reservation" pageTitle="Reservation" /> */}
       <div>
-        <div className="container mt-20">
+        <div className="w-full ">
         {/* ========== Reservation end============= */}
         {/* <ReservationForm /> */}
       <Reservation2 />
       </div>
 
         {/* ========== Reservation end============= */}
-        <div className="best-offer-area1 mb-120">
+        {/* <div className="best-offer-area1 mb-120">
           <div className="container">
             <div className="row d-flex justify-content-center mb-40">
               <div className="col-lg-8">
@@ -93,7 +97,10 @@ function reservation() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <MenuList2/>
+
+        <NewItem2/>
       </div>
     </Layout>
   );
