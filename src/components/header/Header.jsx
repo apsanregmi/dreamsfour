@@ -82,13 +82,13 @@ function Header() {
             : "header-area style-2"
         }
       >
-        <div className="container d-flex justify-content-between align-items-center h-12 ml-1 sm:ml-4 md:ml-4 sm:h-20">
-          <div className="header-logo p-4">
+        <div className="container d-flex justify-content-between align-items-center h-14 ml-1 sm:ml-4 md:ml-4 sm:h-20">
+          <div className="header-logo px-4">
             <Link href="/" legacyBehavior>
               <a>
                 <img
                   alt="image"
-                  className="img-fluid  h-10 md:ml-4 w-48 sm:h-16 md:p-2"
+                  className="img-fluid  h-14 md:ml-4 w-48 sm:h-16 md:px-2"
                   src="assets/images/logo/Asset2.svg"
                 />
               </a>
@@ -150,7 +150,7 @@ function Header() {
               <li className="h-full flex items-center">
   <Link href="/menu1" legacyBehavior>
     <a
-      className={`bg-yellow-500 text-white px-4 py-2 rounded-md ${
+      className={`bg-yellow-500 text-white px-4 py-2 rounded-full ${
         currentRoute === "/menu1" ? "active" : ""
       } flex items-center justify-center`}
       style={{ height: '100%' }}
