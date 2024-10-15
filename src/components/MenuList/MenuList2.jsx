@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import menuList2Data from "../../data/menu.json"; 
+import menuList2Data from "../../data/menu.json";
 
 function MenuList2() {
   const [showMore, setShowMore] = useState(6);
@@ -20,11 +20,8 @@ function MenuList2() {
                   className="left-vec"
                   src="assets/images/icon/sub-title-vec.svg"
                   alt="sub-title-vec"
-                /><div className="text-yellow-500 text-2xl">
-                Menu List
-
-
-                </div>
+                />
+                <div className="text-yellow-500 text-2xl">Menu List</div>
                 <img
                   className="right-vec"
                   src="assets/images/icon/sub-title-vec.svg"
@@ -71,11 +68,7 @@ function MenuList2() {
               <div key={id} className="col-lg-4 col-md-6 col-sm-6">
                 <div className="food-items2-wrap">
                   <div className="food-img">
-                    <img
-                      className="img-fluid"
-                      src={image}
-                      alt={slideTitle}
-                    />
+                    <img className="img-fluid" src={image} alt={slideTitle} />
                     <div className="batch">
                       <a>{foodCategory}</a>
                     </div>
@@ -85,10 +78,18 @@ function MenuList2() {
                   </div>
                   <div className="food-content">
                     <h3>
-                      <Link href="/shop-details">{slideTitle}</Link>
+                      <Link
+                        href={{
+                          pathname: "/menu1",
+                          query: { recommendedItemId: id }, // Pass the id as a query param
+                        }}
+                      >
+                        {slideTitle}
+                      </Link>
                     </h3>
                     <p>{description}</p>
-                    <span className="food-type">{foodType}</span> {/* Displaying the food type */}
+                    <span className="food-type">{foodType}</span>{" "}
+                    {/* Displaying the food type */}
                   </div>
                 </div>
               </div>
