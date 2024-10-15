@@ -48,12 +48,12 @@ function Home3Testimonial() {
     },
   };
   return (
-    <div className="home3-testimonial mb-120">
+    <div className="home3-testimonial mb-120 mt-10">
       <div className="container">
         <div className="row justify-content-center mb-45">
           <div className="col-lg-8">
             <div className="section-title3 text-center">
-              <span>
+              <div className="flex items-center justify-center gap-2">
                 {" "}
                 <img
                   className="left-vec"
@@ -66,7 +66,7 @@ function Home3Testimonial() {
                   src="assets/images/icon/h3-sub-title-vec.svg"
                   alt=""
                 />
-              </span>
+              </div>
               <h2>Customer Feedback</h2>
             </div>
           </div>
