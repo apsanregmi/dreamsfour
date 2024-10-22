@@ -18,13 +18,13 @@ function Banner3() {
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/">
-              <i className="bx bxl-linkedin" />
+            <a href="https://www.tiktok.com/">
+              <i className="bx bxl-tiktok" />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/">
-              <i className="bx bxl-twitter" />
+            <a href="https://yelp.com/">
+              <i className="bx bxl-yelp" />
             </a>
           </li>
         </ul>
