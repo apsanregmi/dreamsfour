@@ -82,13 +82,13 @@ function Header() {
             : "header-area style-2"
         }
       >
-        <div className="container d-flex justify-content-between align-items-center h-14 ml-1 sm:ml-4 md:ml-4 sm:h-20">
+        <div className="container d-flex justify-content-between align-items-center h-16 ml-1 sm:ml-4 md:ml-4 sm:h-20">
           <div className="header-logo px-4">
             <Link href="/" legacyBehavior>
               <a>
                 <img
                   alt="image"
-                  className="img-fluid  h-14 md:ml-4 w-48 sm:h-16 md:px-2"
+                  className="img-fluid  h-12 md:ml-4 w-48 sm:h-16 md:px-2"
                   src="assets/images/logo/Asset2.svg"
                 />
               </a>
@@ -155,7 +155,7 @@ function Header() {
       } flex items-center justify-center`}
       style={{ height: '100%' }}
     >
-      Menu
+     Order Menu
     </a>
   </Link>
 </li>

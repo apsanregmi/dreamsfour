@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +7,7 @@ const ContactForm = () => {
     message: '',
     consent: false,
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -19,22 +19,24 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      const res = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID
-      );
+        }),
+      });
 
-      if (res.status === 200) {
-        alert('Message sent successfully! We will get back to you soon.');
-
+      const result = await response.json();
+      if (result.success) {
+        alert('Message sent successfully! A confirmation email has been sent to your address.');
         // Reset the form
         setFormData({
           name: '',
@@ -42,10 +44,14 @@ const ContactForm = () => {
           message: '',
           consent: false,
         });
+      } else {
+        alert("Can't send, please check and try again.");
       }
     } catch (error) {
-      console.error('EmailJS error:', error);
-      alert("Can't send, please check and try again.");
+      console.error('Send Email error:', error);
+      alert('An error occurred while sending the message.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -57,20 +63,10 @@ const ContactForm = () => {
             <div className="section-title text-center">
               <span>
                 <div className='flex'>
-
-                <img
-                  className="left-vec"
-                  src="assets/images/icon/sub-title-vec.svg"
-                  alt="sub-title-vec"
-                />
-                Contact Us
-                <img
-                  className="right-vec"
-                  src="assets/images/icon/sub-title-vec.svg"
-                  alt="sub-title-vec"
-                />
+                  <img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />
+                  Contact Us
+                  <img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />
                 </div>
-
               </span>
               <h2>Get In Touch</h2>
             </div>
@@ -132,7 +128,9 @@ const ContactForm = () => {
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="form-inner">
-                    <button type="submit">Send Message</button>
+                    <button type="submit" disabled={loading}>
+                      {loading ? 'Sending...' : 'Send Message'}
+                    </button>
                   </div>
                 </div>
               </div>
