@@ -47,7 +47,7 @@ function About1() {
               <div className="description">
                 <p>
                   We offer affordable services to make your special ocassion truly memorable.
-                  As your all-in-one event solution, we provide catering for a wide variety of events Whether its a 
+                  As your all-in-one event solution, we provide catering and event services for a wide variety of events Whether its a 
                 </p>
               </div>
             </div>
@@ -83,7 +83,11 @@ function About1() {
                     </li> */}
                   </ul>
                 </div>
+                <div className="transform scale-50 h-10">
+
                 <AboutCounter />
+                </div>
+
 
                 {/* <div className="author-area">
                   <div className="author-content">
