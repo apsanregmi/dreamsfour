@@ -44,7 +44,7 @@ function About1() {
                 <img src="assets/images/icon/mission.svg" alt="" />
                 <h4>Our Mission</h4>
               </div> */}
-              <div className="description">
+              <div className="description h-10  mb-4">
                 <p>
                   We offer affordable services to make your special ocassion truly memorable.
                   As your all-in-one event solution, we provide catering and event services for a wide variety of events Whether its a 
@@ -83,7 +83,7 @@ function About1() {
                     </li> */}
                   </ul>
                 </div>
-                <div className="transform scale-50 h-10">
+                <div className="mb-2">
 
                 <AboutCounter />
                 </div>

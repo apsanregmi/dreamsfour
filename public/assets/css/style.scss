@@ -3958,7 +3958,7 @@ header.style-3 {
             max-width: 630px;
             width: 100%;
             p{
-                @include font(1.125rem,400,var(--text-color1));
+                @include font(1.0rem,400,var(--text-color1));
                 font-family: var(--font-Jost);
                 margin-bottom: 0;
             }

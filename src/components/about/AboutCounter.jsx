@@ -2,7 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 function AboutCounter() {
   return (
-    <div className="about-counter mb-120">
+    <div className="about-counter mb-100">
       <div className="container">
         <div className="row justify-content-center g-md-4 gy-5 ">
           <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6">
