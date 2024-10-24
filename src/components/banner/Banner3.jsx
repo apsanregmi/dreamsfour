@@ -3,7 +3,7 @@ import React from "react";
 
 function Banner3() {
   return (
-    <div className="home3-banner">
+    <div className="home3-banner  ">
       {/* Social Media Icons Section */}
       <div className="social-area">
         <ul>
@@ -72,7 +72,7 @@ function Banner3() {
               className="left-vec"
               src="assets/images/icon/h3-sub-title-vec.svg"
               alt="Left Decoration"
-            /><div className="text-xl  px-4 text-white font-bold ">
+            /><div className="text-xl  px-4 text-white font-bold  ">
             Welcome To Restho
           </div>
             <img

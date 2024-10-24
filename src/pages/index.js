@@ -25,7 +25,14 @@ function IndexPage() {
         {/* <link rel="icon" href="assets/images/icon/logo-icon.svg" /> */}
       </Head>
       <Header />
+
+
+      <div>
       <Banner3/>
+
+      </div>
+
+      
       <Product1 />
       {/* <Banner /> */}
       <NewItem2 />
