@@ -1,62 +1,69 @@
 import React from "react";
 import CountUp from "react-countup";
-
 function AboutCounter() {
   return (
-    <div className="about-counter mb-24">
-      {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-  <div className="bg-gray-200 p-4">Item 1</div>
-  <div className="bg-gray-200 p-4">Item 2</div>
-  <div className="bg-gray-200 p-4">Item 3</div>
-  <div className="bg-gray-200 p-4">Item 4</div>
-</div> */}
-
-      <div className="container mx-auto px-4 mb-4">
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 "> */}
-        <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-          <div className="counter-single text-center ">
-            <div className="counter-icon mb-4">
-              <img src="assets/images/icon/chef.svg" alt="Professional Chef" className="mx-auto" />
-            </div>
-            <div className="countdown">
-              <h3 className="text-3xl font-bold">
-                <CountUp end={100} />
-              </h3>
-              <p className="mt-2 text-lg">Professional Chef</p>
+    <div className="about-counter mb-120">
+      <div className="container">
+        <div className="row justify-content-center g-md-4 gy-5">
+          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6">
+            <div className="counter-single">
+              <div className="counter-icon">
+                <img src="assets/images/icon/chef.svg" alt="image" />
+              </div>
+              <div className="coundown">
+                <div className="d-flex align-items-center gap-2">
+                  <h3 className="odometer" data-odometer-final={100}>
+                    <CountUp end={100} />
+                  </h3>
+                </div>
+                <p>Professional Chef</p>
+              </div>
             </div>
           </div>
-          <div className="counter-single text-center">
-            <div className="counter-icon mb-4">
-              <img src="assets/images/icon/food.svg" alt="Food Category" className="mx-auto" />
-            </div>
-            <div className="countdown">
-              <h3 className="text-3xl font-bold">
-                <CountUp end={120} />
-              </h3>
-              <p className="mt-2 text-lg">Food Category</p>
-            </div>
-          </div>
-          <div className="counter-single text-center">
-            <div className="counter-icon mb-4">
-              <img src="assets/images/icon/customer.svg" alt="Customer Satisfaction" className="mx-auto" />
-            </div>
-            <div className="countdown">
-              <h3 className="text-3xl font-bold">
-                <CountUp end={109} />
-              </h3>
-              <span className="text-2xl">k</span>
-              <p className="mt-2 text-lg">Customer Satisfaction</p>
+          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6">
+            <div className="counter-single">
+              <div className="counter-icon">
+                <img src="assets/images/icon/food.svg" alt="image" />
+              </div>
+              <div className="coundown">
+                <div className="d-flex align-items-center gap-2">
+                  <h3 className="odometer" data-odometer-final={250}>
+                    <CountUp end={120} />
+                  </h3>
+                </div>
+                <p>Food Category</p>
+              </div>
             </div>
           </div>
-          <div className="counter-single text-center">
-            <div className="counter-icon mb-4">
-              <img src="assets/images/icon/award.svg" alt="Award Winning" className="mx-auto" />
+          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6">
+            <div className="counter-single">
+              <div className="counter-icon">
+                <img src="assets/images/icon/customer.svg" alt="image" />
+              </div>
+              <div className="coundown">
+                <div className="d-flex align-items-center gap-2">
+                  <h3 className="odometer" data-odometer-final={10}>
+                    <CountUp end={109} />
+                  </h3>
+                  <span>k</span>
+                </div>
+                <p>Customer Satisfy</p>
+              </div>
             </div>
-            <div className="countdown">
-              <h3 className="text-3xl font-bold">
-                <CountUp end={150} />
-              </h3>
-              <p className="mt-2 text-lg">Award Winning</p>
+          </div>
+          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6">
+            <div className="counter-single">
+              <div className="counter-icon">
+                <img src="assets/images/icon/award.svg" alt="image" />
+              </div>
+              <div className="coundown">
+                <div className="d-flex align-items-center gap-2">
+                  <h3 className="odometer" data-odometer-final={100}>
+                    <CountUp end={150} />
+                  </h3>
+                </div>
+                <p>Award Wining</p>
+              </div>
             </div>
           </div>
         </div>

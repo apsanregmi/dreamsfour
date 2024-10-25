@@ -28,11 +28,15 @@ function IndexPage() {
 
 
       <div>
-      <Banner3/>
+
+
+        <Banner3/>
+
+        
 
       </div>
 
-      
+
       <Product1 />
       {/* <Banner /> */}
       <NewItem2 />
