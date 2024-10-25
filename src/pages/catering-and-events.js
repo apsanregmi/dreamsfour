@@ -8,6 +8,8 @@ import TesimonialVideo from "../components/testimonial/TesimonialVideo";
 import Testimonial1 from "../components/testimonial/Testimonial1";
 import Layout from "../layout/Layout";
 import ContactForm from "../components/contact/ContactForm";
+import Reservation2 from "../components/reservation/Reservation2";
+
 
 
 function About() {
@@ -17,8 +19,8 @@ function About() {
       <About1 />
       {/* <AboutCounter /> */}
       <div className="-mt-32">
-      <ContactForm />
-
+      {/* <ContactForm /> */}
+<Reservation2/>
 
       </div>
 
