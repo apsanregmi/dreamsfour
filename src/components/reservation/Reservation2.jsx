@@ -13,9 +13,16 @@ function Reservation2() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
+    setSuccess("");
+
     const reservationData = {
       firstName,
       lastName,
@@ -27,9 +34,40 @@ function Reservation2() {
       eventType,
       additionalMessage,
     };
-    console.log("Reservation Data: ", reservationData);
-    // Add further logic to handle the reservation (e.g., send to API)
+
+    try {
+      const response = await fetch("/api/sendReservation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reservationData),
+      });
+
+      if (response.ok) {
+        setSuccess("Reservation submitted successfully!");
+        alert("Reservation Completion");
+        
+        // Reset form fields
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setEventDate("");
+        setStartTime("");
+        setGuests("");
+        setEventType("");
+        setAdditionalMessage("");
+      } else {
+        throw new Error("Failed to submit reservation. Please try again.");
+      }
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return (
     <div className="h2-reservarion-area mb-120">
       <div className="bg-vector"></div>

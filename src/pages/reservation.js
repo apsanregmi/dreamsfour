@@ -15,8 +15,8 @@ function reservation() {
       <div>
         <div className="w-full ">
         {/* ========== Reservation end============= */}
-        <ReservationForm />
-      {/* <Reservation2 /> */}
+        {/* <ReservationForm /> */}
+      <Reservation2 />
       </div>
 
         {/* ========== Reservation end============= */}
