@@ -27,24 +27,44 @@ function ReservationForm() {
     setFormData({ ...formData, eventDate: date });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Integrate EmailJS here later for sending form data
-    console.log("Form Data: ", formData);
-    alert("Reservation submitted successfully!");
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-      eventDate: null,
-      eventStartTime: "",
-      numberOfGuests: "",
-      typeOfEvent: "",
-      additionalComments: "",
-    });
+    console.log("Form submitted");
+  
+    try {
+      const response = await fetch('/api/sendReservation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      
+  
+      const result = await response.json();
+      if (result.success) {
+        alert('Reservation submitted successfully!');
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          eventDate: null,
+          eventStartTime: "",
+          numberOfGuests: "",
+          typeOfEvent: "",
+          additionalComments: "",
+        });
+      } else {
+        console.error('Error:', result.error);
+        alert('Failed to submit reservation');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred while submitting the reservation');
+    }
   };
+  
+  
 
   return (
     <div className="container">
