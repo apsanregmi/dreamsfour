@@ -54,7 +54,8 @@ function Product1() {
   };
 
   return (
-    <div className="h2-product-area pt-120 pb-120">
+    <div className="h2-product-area pt-72 pb-72 mt-10 mb-10">
+      
       <Swiper {...slider} className="swiper h2-product-slider">
         <div className="swiper-wrapper">
           {menuItems.map((item) => (
@@ -68,13 +69,14 @@ function Product1() {
                     style={{
                       width: "150px",
                       height: "150px",
-                      borderRadius: "50%", // Make the image circular
-                      objectFit: "cover", // Ensure the image fills the circle
+                      borderRadius: "50%", 
+                      objectFit: "cover", 
                     }}
                   />
                 </div>
                 <div className="product-content" style={{ textAlign: "left", marginTop: "15px" }}>
                   <h4>
+                    
                     {/* Pass the item ID via query params */}
                     <Link legacyBehavior href={{ pathname: "/menu1", query: { recommendedItemId: item.id } }}>
                       <a>{item.slideCategoryTitle}</a>

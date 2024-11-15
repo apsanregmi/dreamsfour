@@ -56,7 +56,7 @@ function NewItem2() {
           <div className="row d-flex justify-content-center mb-40">
             <div className="col-lg-8">
               <div className="section-title text-center">
-                <div className="flex justify-center items-center space-x-2 ">
+                <div className="flex justify-center items-center space-x-4 ">
                   <img
                     className="left-vec w-6 h-6"
                     src="assets/images/icon/sub-title-vec.svg"

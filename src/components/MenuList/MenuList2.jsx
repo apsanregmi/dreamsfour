@@ -15,7 +15,7 @@ function MenuList2() {
         <div className="row d-flex align-items-center justify-content-center mb-40 g-3">
           <div className="col-lg-8">
             <div className="section-title">
-              <div className="flex space-x-2">
+              <div className="flex space-x-4">
                 <img
                   className="left-vec"
                   src="assets/images/icon/sub-title-vec.svg"

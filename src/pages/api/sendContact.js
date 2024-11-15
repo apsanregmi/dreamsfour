@@ -48,8 +48,8 @@ export default async function handler(req, res) {
   try {
     // Send email to admin
     await sendgrid.send({
-      to: 'itsmeapsan@gmail.com', // Admin email address
-      from: 'maheshregmi61@gmail.com', // Must be a verified email on SendGrid
+      to: 'itsmeapsan@gmail.com', 
+      from: 'maheshregmi61@gmail.com', 
       subject: 'New Contact Form Submission',
       html: adminEmailContent,
     });
