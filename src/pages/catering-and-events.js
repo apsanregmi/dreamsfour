@@ -9,6 +9,8 @@ import Testimonial1 from "../components/testimonial/Testimonial1";
 import Layout from "../layout/Layout";
 import ContactForm from "../components/contact/ContactForm";
 import Reservation2 from "../components/reservation/Reservation2";
+import Home3Testimonial from '../components/testimonial/Home3Testimonial';
+
 
 
 
@@ -29,6 +31,7 @@ function About() {
       {/* <TesimonialVideo /> */}
       {/* <Experties1 /> */}
       {/* <Gallery1 /> */}
+      <Home3Testimonial />
     </Layout>
   );
 }

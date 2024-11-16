@@ -10,6 +10,7 @@ import Product1 from "../components/product/Product1";
 import Reservation2 from "../components/reservation/Reservation2";
 import NewItem2 from "../components/tems/NewItem2";
 import Banner3 from "../components/banner/Banner3";
+import Home3Testimonial from '../components/testimonial/Home3Testimonial';
 
 import { BrowserRouter as Router } from 'react-router-dom'; 
 // import NewItem1 from "../components/tems/NewItem1";
@@ -47,6 +48,8 @@ function IndexPage() {
       <Gallary2 />
       <Reservation2 />
       <About />
+
+      <Home3Testimonial/>
 
       <Footer />
       {/* </Router> */}

@@ -73,7 +73,7 @@ function Banner3() {
               src="assets/images/icon/h3-sub-title-vec.svg"
               alt="Left Decoration"
             /><div className="text-xl  px-4 text-white font-bold  ">
-            Welcome To Restho
+            Welcome To 4DREAMS
           </div>
             <img
               className="right-vec"
@@ -86,7 +86,7 @@ function Banner3() {
           {/* Discover More Button */}
           <Link legacyBehavior href="/menu1">
             <a className="primary-btn7 btn-md2">
-              <i className="bi bi-arrow-up-right-circle" /> Discover More
+              <i className="bi bi-arrow-up-right-circle" /> Order Now 
             </a>
           </Link>
         </div>

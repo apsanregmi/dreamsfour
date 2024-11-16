@@ -5,6 +5,8 @@ import Layout from "../layout/Layout";
 import Reservation2 from "../components/reservation/Reservation2";
 import MenuList2 from "../components/MenuList/MenuList2";
 import NewItem2 from "../components/tems/NewItem2";
+// import Home3Testimonial from '../components/testimonial/Home3Testimonial';
+
 
 
 
@@ -102,6 +104,8 @@ function reservation() {
 
         <NewItem2/>
       </div>
+      
+
     </Layout>
   );
 }

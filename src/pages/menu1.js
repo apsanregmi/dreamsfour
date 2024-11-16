@@ -125,7 +125,10 @@ function Menu1() {
       )}
 
       {/* Testimonials Section */}
+      <div className='mt-10'>
       <Home3Testimonial />
+
+      </div>
     </Layout>
   );
 }

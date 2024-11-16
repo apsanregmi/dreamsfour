@@ -53,10 +53,10 @@ function Home3Testimonial() {
         <div className="row justify-content-center mb-45">
           <div className="col-lg-8">
             <div className="section-title3 text-center">
-              <span>
+              <div className="flex justify-center item-center space-x-4">
                 {" "}
                 <img
-                  className="left-vec"
+                  className="left-vec mr-4"
                   src="assets/images/icon/h3-sub-title-vec.svg"
                   alt=""
                 />
@@ -66,7 +66,7 @@ function Home3Testimonial() {
                   src="assets/images/icon/h3-sub-title-vec.svg"
                   alt=""
                 />
-              </span>
+              </div>
               <h2>Customer Feedback</h2>
             </div>
           </div>

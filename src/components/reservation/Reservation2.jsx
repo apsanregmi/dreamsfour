@@ -72,7 +72,7 @@ function Reservation2() {
     <div className="h2-reservarion-area mb-120">
       <div className="bg-vector"></div>
       <div className="w-full">
-        <div className="row d-flex align-items-center justify-content-center mb-40 pt-40">
+        <div className="row d-flex align-items-center justify-content-center mb-40 pt-6">
           <div className="col-lg-8">
             <div className="section-title text-center">
               <span>
@@ -95,7 +95,7 @@ function Reservation2() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-10 -mt-6">
+          <div className="col-lg-10 -mt-8">
             <form onSubmit={handleSubmit}>
               <div className="row justify-content-center">
                 <div className="col-lg-6 col-md-6 mb-25">
@@ -119,7 +119,8 @@ function Reservation2() {
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 mb-25">
-                  <div className="form-inner date-icon">
+                  <div className="
+                  form-inner date-icon">
                     <ReactDatePicker
                       selected={eventDate}
                       onChange={(date) => setEventDate(date)}
