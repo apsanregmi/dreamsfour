@@ -39,30 +39,36 @@ function Banner3() {
           <img src="assets/images/bg/open-vec-right.png" alt="Decoration" />
         </div> */}
         <div className="flex space-x-4">
-
-        
           <img
             className="left-vec w-16"
             src="assets/images/icon/h3-open-vec.svg"
             alt="Left Decoration"
           />
           <p className="text-white">
-          Our Restho Restaurant is Open from 9:30 AM to 9:00 PM
+            Our Restho Restaurant is Open from 9:30 AM to 9:00 PM
           </p>
           <img
             className="right-vec w-16"
             src="assets/images/icon/h3-open-vec.svg"
             alt="Right Decoration"
           />
-        
         </div>
-
       </div>
 
       {/* Video Banner Section */}
       <div className="video-wrap d-flex align-items-center justify-content-center">
-        <video autoPlay loop muted preload="auto">
-          <source src="assets/video/myVid.mp4" type="video/mp4" />
+        <video
+          autoPlay
+          loop
+          muted
+          preload="auto"
+          style={{
+            width: "100%",
+            height: "90vh",
+            objectFit: "cover", // Ensures the video fills its container
+          }}
+        >
+          <source src="assets/video/v1.mp4" type="video/mp4" />
         </video>
 
         {/* Banner Content */}
@@ -72,9 +78,10 @@ function Banner3() {
               className="left-vec"
               src="assets/images/icon/h3-sub-title-vec.svg"
               alt="Left Decoration"
-            /><div className="text-xl  px-4 text-white font-bold  ">
-            Welcome To 4DREAMS
-          </div>
+            />
+            <div className="text-xl  px-4 text-white font-bold  ">
+              Welcome To 4DREAMS
+            </div>
             <img
               className="right-vec"
               src="assets/images/icon/h3-sub-title-vec.svg"
@@ -86,7 +93,7 @@ function Banner3() {
           {/* Discover More Button */}
           <Link legacyBehavior href="/menu1">
             <a className="primary-btn7 btn-md2">
-              <i className="bi bi-arrow-up-right-circle" /> Order Now 
+              <i className="bi bi-arrow-up-right-circle" /> Order Now
             </a>
           </Link>
         </div>

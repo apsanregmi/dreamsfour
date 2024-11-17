@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function Breadcrumb({ pageTitle, pageName }) {
+function Breadcrumb({ pageTitle, pageName, image }) {
   return (
     <div className="breadcrumb-section">
       <div className="breadcrumb-left-vec">

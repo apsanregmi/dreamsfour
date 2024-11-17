@@ -12,7 +12,7 @@ function MenuList2() {
   return (
     <div className="home2-food-items mb-120">
       <div className="container">
-        <div className="row d-flex align-items-center justify-content-center mb-40 g-3">
+        <div className="row d-flex align-items-center justify-content-center mb-40 g-3" style={{ marginBottom: "10px" }}>
           <div className="col-lg-8">
             <div className="section-title">
               <div className="flex space-x-4">
